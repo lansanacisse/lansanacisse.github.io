@@ -17,32 +17,6 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <style>
-        /* Sélecteur langue */
-        .lang-switch { display:flex; gap:.4rem; align-items:center; font-size:.75rem; }
-        .lang-switch button { background:none; border:1px solid var(--border-light,#444); padding:.25rem .55rem; cursor:pointer; border-radius:4px; color:var(--text-dark); line-height:1; }
-        .lang-switch button[aria-pressed="true"] { background:var(--primary-color); color:#fff; border-color:var(--primary-color); }
-        /* Navigation alignement */
-        .nav { display:flex; align-items:center; gap:var(--space-lg); }
-        .nav__menu { display:flex; align-items:center; gap:var(--space-lg); margin-left:auto; }
-        .nav__menu > li { list-style:none; }
-        .nav__lang-switch { padding:0; }
-        /* Empêcher le wrap dû à la différence de longueur EN/FR : réduire espace et permettre compression */
-        @media (min-width:769px){
-            .nav__menu { flex-wrap:nowrap; }
-            .nav__menu a, .lang-switch button { white-space:nowrap; }
-        }
-        /* Mobile */
-        .nav__toggle { margin-left:auto; }
-        @media (max-width:768px){
-            .nav { flex-wrap:wrap; }
-            .nav__toggle { order:2; }
-            .nav__menu { flex-direction:column; align-items:stretch; width:100%; gap:var(--space-sm); margin-left:0; }
-            .nav__menu--open { display:flex; }
-            .nav__lang-switch { order:0; }
-            .lang-switch { justify-content:center; font-size:.8rem; }
-        }
-    </style>
 </head>
 <body>
     <!-- Canvas arrière-plan animé -->
@@ -55,8 +29,8 @@
     <header class="header">
         <div class="container">
             <nav class="nav" role="navigation" aria-label="Navigation principale">
-                <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
                 <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+                <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
                 <ul class="nav__menu" id="nav-menu">
                     <li><a href="index.html" class="nav__link nav__link--active" data-i18n="nav.home">Accueil</a></li>
                     <li><a href="projets.html" class="nav__link" data-i18n="nav.projects">Projets</a></li>
@@ -274,8 +248,48 @@
 
     <!-- JavaScript pour le menu mobile + i18n -->
     <script>
-        function toggleMenu(){const menu=document.getElementById('nav-menu');menu.classList.toggle('nav__menu--open');}
-        document.addEventListener('click',function(event){const menu=document.getElementById('nav-menu');const toggle=document.querySelector('.nav__toggle');if(!menu.contains(event.target)&&!toggle.contains(event.target)){menu.classList.remove('nav__menu--open');}});
+        function toggleMenu(){
+            const menu=document.getElementById('nav-menu');
+            const toggle=document.querySelector('.nav__toggle');
+            const isOpen=menu.classList.toggle('nav__menu--open');
+            // Accessibilité / état
+            toggle.setAttribute('aria-expanded', isOpen);
+            toggle.setAttribute('aria-label', isOpen? 'Fermer le menu':'Ouvrir le menu');
+            toggle.textContent = isOpen ? '✕' : '☰';
+        }
+        document.addEventListener('click',function(event){
+            const menu=document.getElementById('nav-menu');
+            const toggle=document.querySelector('.nav__toggle');
+            if(!menu.contains(event.target)&&!toggle.contains(event.target)){
+                if(menu.classList.remove('nav__menu--open')){}
+                toggle.setAttribute('aria-expanded','false');
+                toggle.setAttribute('aria-label','Ouvrir le menu');
+                toggle.textContent='☰';
+            }
+        });
+        // Fermeture du menu après sélection d'un lien (mobile)
+        document.querySelectorAll('#nav-menu a').forEach(a=>{
+            a.addEventListener('click',()=>{
+                if(window.innerWidth<=768){
+                    const menu=document.getElementById('nav-menu');
+                    const toggle=document.querySelector('.nav__toggle');
+                    menu.classList.remove('nav__menu--open');
+                    toggle.setAttribute('aria-expanded','false');
+                    toggle.setAttribute('aria-label','Ouvrir le menu');
+                    toggle.textContent='☰';
+                }
+            });
+        });
+        // Ajuste l'icône si on redimensionne (ex: rotation écran)
+        window.addEventListener('resize',()=>{
+            const toggle=document.querySelector('.nav__toggle');
+            const menu=document.getElementById('nav-menu');
+            if(window.innerWidth>768){
+                toggle.textContent='☰';
+                toggle.setAttribute('aria-expanded','false');
+                menu.classList.remove('nav__menu--open');
+            }
+        });
     </script>
     <script src="./assets/js/i18n.js"></script>
 </body>

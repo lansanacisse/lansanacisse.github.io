@@ -213,37 +213,29 @@ a:focus {
 }
 
 @media (max-width: 768px) {
-  .nav {
-    flex-wrap: wrap;
+  .nav { flex-wrap: wrap; }
+  /* Bouton hamburger visible et placé à gauche */
+  .nav__toggle { display:block; order:0; margin-left:0; }
+  /* Logo après le bouton */
+  .nav__logo { order:1; }
+  /* Menu caché par défaut sur mobile */
+  .nav__menu { 
+    order: 2; 
+    position: static; 
+    flex-direction: column; 
+    align-items: stretch; 
+    width: 100%; 
+    gap: var(--space-sm); 
+    margin-left: 0; 
+    padding: var(--space-md) 0 0 0; 
+    display: none !important;
   }
-  
-  .nav__toggle {
-    order: 2;
+  /* Quand ouvert - doit surcharger le display:none */
+  .nav__menu--open { 
+    display: flex !important; 
   }
-  
-  /* On bascule en colonne pleine largeur comme sur index */
-  .nav__menu {
-    position: static;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: var(--space-sm);
-    margin-left: 0;
-    padding: var(--space-md) 0 0 0;
-  }
-  
-  .nav__menu--open {
-    display: flex;
-  }
-  
-  .nav__lang-switch {
-    order: 0;
-  }
-  
-  .lang-switch {
-    justify-content: center;
-    font-size: 0.8rem;
-  }
+  .nav__lang-switch { order: 0; }
+  .lang-switch { justify-content: center; font-size: 0.8rem; }
 }
 
 @media (min-width: 769px) {

@@ -286,7 +286,36 @@
 
     <!-- JavaScript -->
     <script>
-        function toggleMenu(){const menu=document.getElementById('nav-menu');menu.classList.toggle('nav__menu--open');}
+        function toggleMenu(){
+            const menu=document.getElementById('nav-menu');
+            const toggle=document.querySelector('.nav__toggle');
+            const isOpen=menu.classList.toggle('nav__menu--open');
+            toggle.setAttribute('aria-expanded', isOpen);
+            toggle.setAttribute('aria-label', isOpen? 'Fermer le menu':'Ouvrir le menu');
+            toggle.textContent = isOpen ? '✕' : '☰';
+        }
+        document.addEventListener('click',function(e){
+            const menu=document.getElementById('nav-menu');
+            const toggle=document.querySelector('.nav__toggle');
+            if(!menu.contains(e.target)&&!toggle.contains(e.target)) {
+                menu.classList.remove('nav__menu--open');
+                toggle.setAttribute('aria-expanded','false');
+                toggle.setAttribute('aria-label','Ouvrir le menu');
+                toggle.textContent='☰';
+            }
+        });
+        document.querySelectorAll('#nav-menu a').forEach(a=>{
+            a.addEventListener('click',()=>{
+                if(window.innerWidth<=768){
+                    const menu=document.getElementById('nav-menu');
+                    const toggle=document.querySelector('.nav__toggle');
+                    menu.classList.remove('nav__menu--open');
+                    toggle.setAttribute('aria-expanded','false');
+                    toggle.setAttribute('aria-label','Ouvrir le menu');
+                    toggle.textContent='☰';
+                }
+            });
+        });
         
         const messageTextarea=document.getElementById('contact-message');const charCount=document.getElementById('char-count');
         if(messageTextarea){messageTextarea.addEventListener('input',function(){charCount.textContent=this.value.length;});}

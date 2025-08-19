@@ -144,9 +144,37 @@
 
     <!-- JavaScript -->
     <script>
-        function toggleMenu(){const m=document.getElementById('nav-menu');m.classList.toggle('nav__menu--open');}
+        function toggleMenu(){
+            const m=document.getElementById('nav-menu');
+            const toggle=document.querySelector('.nav__toggle');
+            const isOpen=m.classList.toggle('nav__menu--open');
+            toggle.setAttribute('aria-expanded', isOpen);
+            toggle.setAttribute('aria-label', isOpen? 'Fermer le menu':'Ouvrir le menu');
+            toggle.textContent = isOpen ? '✕' : '☰';
+        }
         // Fermer menu mobile
-        document.addEventListener('click',e=>{const menu=document.getElementById('nav-menu');const t=document.querySelector('.nav__toggle');if(!menu.contains(e.target)&&!t.contains(e.target)) menu.classList.remove('nav__menu--open');});
+        document.addEventListener('click',e=>{
+            const menu=document.getElementById('nav-menu');
+            const t=document.querySelector('.nav__toggle');
+            if(!menu.contains(e.target)&&!t.contains(e.target)) {
+                menu.classList.remove('nav__menu--open');
+                t.setAttribute('aria-expanded','false');
+                t.setAttribute('aria-label','Ouvrir le menu');
+                t.textContent='☰';
+            }
+        });
+        document.querySelectorAll('#nav-menu a').forEach(a=>{
+            a.addEventListener('click',()=>{
+                if(window.innerWidth<=768){
+                    const menu=document.getElementById('nav-menu');
+                    const toggle=document.querySelector('.nav__toggle');
+                    menu.classList.remove('nav__menu--open');
+                    toggle.setAttribute('aria-expanded','false');
+                    toggle.setAttribute('aria-label','Ouvrir le menu');
+                    toggle.textContent='☰';
+                }
+            });
+        });
         
         // Newsletter form
         document.addEventListener('DOMContentLoaded',()=>{const f=document.querySelector('.form');if(f){f.addEventListener('submit',e=>{e.preventDefault();alert(window.I18N_DICT?.['blog.newsletter.success']||'Merci !');f.reset();});}});
