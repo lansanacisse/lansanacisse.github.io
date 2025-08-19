@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les étapes clés d'un système RAG - Blog | Lansana CISSE</title>
+    <meta name="description" content="Découvrez les étapes essentielles pour construire un système RAG (Retrieval-Augmented Generation) efficace, de l'indexation à la génération.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Les étapes clés d'un système RAG">
+    <meta property="og:description" content="Guide complet pour comprendre et implémenter un système RAG">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://lansanacisse.github.io/blog/etapes-cles-systeme-rag.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+    <!-- Canvas arrière-plan animé -->
+    <canvas id="bg-network" aria-hidden="true"></canvas>
+
+    <!-- Skip link pour l'accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Navigation principale">
+                <button class="nav__toggle" aria-label="Ouvrir le menu">☰</button>
+                <a href="../index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
+                <ul class="nav__menu" id="nav-menu">
+                    <li><a href="../index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../projets.html" class="nav__link" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="../competences.html" class="nav__link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="../experiences.html" class="nav__link" data-i18n="nav.experiences">Expériences</a></li>
+                    <li><a href="../blog.html" class="nav__link nav__link--active" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="../contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="../assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener" data-i18n="nav.cv">Télécharger CV</a></li>
+                    <li class="nav__lang-switch">
+                        <div class="lang-switch" id="lang-switch" aria-label="Language selector">
+                            <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+                            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <div class="container">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="../index.html">Accueil</a></li>
+                <li class="breadcrumb__item"><a href="../blog.html">Blog</a></li>
+                <li class="breadcrumb__item">Les étapes clés d'un système RAG</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main id="main-content">
+        <!-- Article Header -->
+        <section class="section">
+            <div class="container">
+                <article class="card card--centered">
+                    <div class="card__header">
+                        <div class="tags tags--medium-spaced">
+                            <span class="tag tag--primary">IA</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                        <h1 class="card__title title--large">
+                            Les étapes clés d'un système RAG
+                        </h1>
+                        <p class="card__subtitle subtitle--large">
+                            Guide complet pour comprendre et implémenter un système de Retrieval-Augmented Generation
+                        </p>
+                        <div class="meta-info">
+                            <span>19 août 2025</span>
+                            <span>8 min de lecture</span>
+                            <span>Lansana CISSE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card__content" style="line-height: 1.7; font-size: 1.1rem;">
+                        <h2>Introduction</h2>
+                        <p>
+                            Les systèmes RAG (Retrieval-Augmented Generation) représentent une avancée majeure dans le domaine du traitement du langage naturel. 
+                            Ils combinent la puissance des modèles de langage avec la capacité de rechercher et d'utiliser des informations externes en temps réel.
+                        </p>
+
+                        <div class="card" style="background: var(--bg-light); padding: var(--space-md); margin: var(--space-lg) 0;">
+                            <h3 style="color: var(--primary-color); margin-bottom: var(--space-sm);">Qu'est-ce qu'un système RAG ?</h3>
+                            <p style="margin: 0;">
+                                RAG est une architecture qui augmente les capacités d'un modèle de langage en lui permettant d'accéder à une base de connaissances externe 
+                                pour générer des réponses plus précises et actualisées.
+                            </p>
+                        </div>
+
+                        <h2>Les 5 étapes essentielles</h2>
+
+                        <h3>1. Collecte et préparation des données</h3>
+                        <p>
+                            La première étape consiste à rassembler les documents qui constitueront votre base de connaissances :
+                        </p>
+                        <ul>
+                            <li><strong>Sources variées</strong> : PDFs, pages web, bases de données, APIs</li>
+                            <li><strong>Nettoyage</strong> : Suppression du bruit, formatage standardisé</li>
+                            <li><strong>Structuration</strong> : Organisation hiérarchique des informations</li>
+                        </ul>
+
+                        <div class="card" style="background: var(--bg-gray); padding: var(--space-md); margin: var(--space-md) 0;">
+                            <h4 style="color: var(--accent-color);">Outils recommandés</h4>
+                            <p><code>PyPDF2</code>, <code>BeautifulSoup</code>, <code>Scrapy</code> pour l'extraction de données</p>
+                        </div>
+
+                        <h3>2. Chunking (Segmentation)</h3>
+                        <p>
+                            Diviser les documents en segments plus petits pour optimiser la recherche :
+                        </p>
+                        <ul>
+                            <li><strong>Taille optimale</strong> : 200-500 tokens par chunk</li>
+                            <li><strong>Chevauchement</strong> : 10-20% pour préserver le contexte</li>
+                            <li><strong>Stratégies</strong> : Par paragraphe, phrase ou section sémantique</li>
+                        </ul>
+
+                        <h3>3. Création d'embeddings</h3>
+                        <p>
+                            Transformer le texte en représentations vectorielles pour la recherche sémantique :
+                        </p>
+                        <div class="card" style="background: var(--bg-light); padding: var(--space-md); margin: var(--space-md) 0;">
+                            <h4>Modèles populaires :</h4>
+                            <ul style="margin: var(--space-xs) 0 0 0;">
+                                <li><strong>OpenAI</strong> : text-embedding-3-large</li>
+                                <li><strong>Sentence Transformers</strong> : all-MiniLM-L6-v2</li>
+                                <li><strong>Cohere</strong> : embed-multilingual-v3.0</li>
+                            </ul>
+                        </div>
+
+                        <h3>4. Stockage et indexation</h3>
+                        <p>
+                            Stocker les vecteurs dans une base de données optimisée pour la recherche :
+                        </p>
+                        <ul>
+                            <li><strong>Vector DBs</strong> : Pinecone, Weaviate, Chroma</li>
+                            <li><strong>Indexation</strong> : HNSW, IVF pour une recherche rapide</li>
+                            <li><strong>Métadonnées</strong> : Source, date, catégorie pour le filtrage</li>
+                        </ul>
+
+                        <h3>5. Retrieval et génération</h3>
+                        <p>
+                            Combiner recherche et génération pour des réponses contextuelles :
+                        </p>
+
+                        <div class="stats-table" style="margin: var(--space-lg) 0;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Étape</th>
+                                        <th>Processus</th>
+                                        <th>Outil/Modèle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1. Query</td>
+                                        <td>Embedding de la question</td>
+                                        <td>Même modèle que l'indexation</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2. Search</td>
+                                        <td>Similarité cosinus</td>
+                                        <td>Vector DB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3. Rank</td>
+                                        <td>Re-ranking des résultats</td>
+                                        <td>Cross-encoder</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4. Generate</td>
+                                        <td>Génération avec contexte</td>
+                                        <td>GPT-4, Claude, Llama</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2>Bonnes pratiques et optimisations</h2>
+
+                        <h3>Performance</h3>
+                        <ul>
+                            <li><strong>Cache</strong> : Mise en cache des requêtes fréquentes</li>
+                            <li><strong>Async</strong> : Traitement asynchrone pour la scalabilité</li>
+                            <li><strong>Batch</strong> : Traitement par lots pour l'indexation</li>
+                        </ul>
+
+                        <h3>Qualité</h3>
+                        <ul>
+                            <li><strong>Évaluation</strong> : Métriques RAGAS, BLEU, ROUGE</li>
+                            <li><strong>A/B Testing</strong> : Comparaison de différentes approches</li>
+                            <li><strong>Feedback</strong> : Boucle d'amélioration continue</li>
+                        </ul>
+
+                        <h2>Conclusion</h2>
+                        <p>
+                            Les systèmes RAG représentent l'avenir des applications IA conversationnelles. En suivant ces étapes clés, 
+                            vous pouvez construire des solutions robustes qui combinent le meilleur des deux mondes : 
+                            la créativité des LLMs et la précision des bases de connaissances.
+                        </p>
+
+                        <p>
+                            L'implémentation peut paraître complexe, mais avec les bons outils et une approche méthodique, 
+                            vous obtiendrez rapidement des résultats impressionnants.
+                        </p>
+                    </div>
+
+                    <div class="card__footer" style="border-top: 1px solid var(--border-light); padding-top: var(--space-lg); margin-top: var(--space-xl);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md);">
+                            <div>
+                                <h4 style="margin-bottom: var(--space-xs);">Partager cet article</h4>
+                                <div style="display: flex; gap: var(--space-sm);">
+                                    <a href="#" class="btn btn--small btn--secondary">LinkedIn</a>
+                                    <a href="#" class="btn btn--small btn--secondary">Twitter</a>
+                                    <a href="#" class="btn btn--small btn--secondary">Email</a>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <p style="color: var(--text-muted); font-size: 0.875rem; margin: 0;">
+                                    Dernière mise à jour : 19 août 2025
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Navigation entre articles -->
+                <div style="max-width: 800px; margin: var(--space-xl) auto 0;">
+                    <div class="grid grid-2">
+                        <div class="card" style="text-align: center; padding: var(--space-md);">
+                            <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: var(--space-xs);">Article précédent</p>
+                            <a href="../blog.html" class="btn btn--secondary">← Retour au blog</a>
+                        </div>
+                        <div class="card" style="text-align: center; padding: var(--space-md);">
+                            <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: var(--space-xs);">Article suivant</p>
+                            <span style="color: var(--text-muted);">Bientôt disponible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <ul class="footer__links">
+                    <li><a href="mailto:lansana6c@gmail.com" class="footer__link" aria-label="Email">✉️</a></li>
+                    <li><a href="https://linkedin.com/in/lansana-cisse" class="footer__link" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a></li>
+                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></a></li>
+                </ul>
+            </div>
+            <p class="footer__copyright" data-i18n="footer.rights">© 2025 Lansana CISSE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+</body>
+</html>

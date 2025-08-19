@@ -17,6 +17,7 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
 </head>
 <body>
     <!-- Canvas arrière-plan animé -->
@@ -29,7 +30,7 @@
     <header class="header">
         <div class="container">
             <nav class="nav" role="navigation" aria-label="Navigation principale">
-                <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+                <button class="nav__toggle" aria-label="Ouvrir le menu">☰</button>
                 <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
                 <ul class="nav__menu" id="nav-menu">
                     <li><a href="index.html" class="nav__link nav__link--active" data-i18n="nav.home">Accueil</a></li>
@@ -214,15 +215,15 @@
         <!-- Section Témoignage / Ce que je recherche -->
         <section class="section">
             <div class="container">
-                <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div class="card card--centered">
                     <div class="card__content">
-                        <h2 class="card__title" style="margin-bottom: var(--space-md);" data-i18n="seeking.title">Ce que je recherche</h2>
-                        <p style="font-size: 1.125rem; margin-bottom: var(--space-lg);" data-i18n="seeking.text">
+                        <h2 class="card__title title--spaced" data-i18n="seeking.title">Ce que je recherche</h2>
+                        <p class="subtitle--large" data-i18n="seeking.text">
                             "Je suis à la recherche d'un poste de Data Scientist ou Consultant Data dans une équipe dynamique où je pourrai 
                             appliquer mes compétences en machine learning sur des projets concrets ayant un impact métier. 
                             Mon objectif : apprendre continuellement et contribuer à des solutions data innovantes."
                         </p>
-                        <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;">
+                        <div class="flex-center">
                             <a href="projets.html" class="btn btn--secondary" data-i18n="seeking.actions.projects">Mes réalisations</a>
                             <a href="contact.html" class="btn btn--primary" data-i18n="seeking.actions.contact">Me contacter</a>
                         </div>
@@ -246,51 +247,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript pour le menu mobile + i18n -->
-    <script>
-        function toggleMenu(){
-            const menu=document.getElementById('nav-menu');
-            const toggle=document.querySelector('.nav__toggle');
-            const isOpen=menu.classList.toggle('nav__menu--open');
-            // Accessibilité / état
-            toggle.setAttribute('aria-expanded', isOpen);
-            toggle.setAttribute('aria-label', isOpen? 'Fermer le menu':'Ouvrir le menu');
-            toggle.textContent = isOpen ? '✕' : '☰';
-        }
-        document.addEventListener('click',function(event){
-            const menu=document.getElementById('nav-menu');
-            const toggle=document.querySelector('.nav__toggle');
-            if(!menu.contains(event.target)&&!toggle.contains(event.target)){
-                if(menu.classList.remove('nav__menu--open')){}
-                toggle.setAttribute('aria-expanded','false');
-                toggle.setAttribute('aria-label','Ouvrir le menu');
-                toggle.textContent='☰';
-            }
-        });
-        // Fermeture du menu après sélection d'un lien (mobile)
-        document.querySelectorAll('#nav-menu a').forEach(a=>{
-            a.addEventListener('click',()=>{
-                if(window.innerWidth<=768){
-                    const menu=document.getElementById('nav-menu');
-                    const toggle=document.querySelector('.nav__toggle');
-                    menu.classList.remove('nav__menu--open');
-                    toggle.setAttribute('aria-expanded','false');
-                    toggle.setAttribute('aria-label','Ouvrir le menu');
-                    toggle.textContent='☰';
-                }
-            });
-        });
-        // Ajuste l'icône si on redimensionne (ex: rotation écran)
-        window.addEventListener('resize',()=>{
-            const toggle=document.querySelector('.nav__toggle');
-            const menu=document.getElementById('nav-menu');
-            if(window.innerWidth>768){
-                toggle.textContent='☰';
-                toggle.setAttribute('aria-expanded','false');
-                menu.classList.remove('nav__menu--open');
-            }
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/i18n.js"></script>
 </body>
 </html>

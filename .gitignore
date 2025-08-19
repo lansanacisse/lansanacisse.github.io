@@ -1,0 +1,22 @@
+# Fichiers temporaires
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Dossiers de développement
+node_modules/
+.vscode/
+.idea/
+
+# Fichiers de sauvegarde
+*.orig
+
+# Scripts de nettoyage (optionnel - décommentez si vous ne voulez pas les versionner)
+# cleanup.ps1
+# cleanup_html.sh
+# SEPARATION_GUIDE.md

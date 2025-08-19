@@ -16,6 +16,7 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
 </head>
 <body>
     <!-- Skip link -->
@@ -27,7 +28,7 @@
             <nav class="nav" role="navigation" aria-label="Navigation principale">
                 <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
                 
-                <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+                <button class="nav__toggle" aria-label="Ouvrir le menu">☰</button>
                 
                 <ul class="nav__menu" id="nav-menu">
                     <li><a href="index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
@@ -304,51 +305,11 @@
                 toggle.textContent='☰';
             }
         });
-        document.querySelectorAll('#nav-menu a').forEach(a=>{
-            a.addEventListener('click',()=>{
-                if(window.innerWidth<=768){
-                    const menu=document.getElementById('nav-menu');
-                    const toggle=document.querySelector('.nav__toggle');
-                    menu.classList.remove('nav__menu--open');
-                    toggle.setAttribute('aria-expanded','false');
-                    toggle.setAttribute('aria-label','Ouvrir le menu');
-                    toggle.textContent='☰';
-                }
-            });
-        });
-        
-        const messageTextarea=document.getElementById('contact-message');const charCount=document.getElementById('char-count');
-        if(messageTextarea){messageTextarea.addEventListener('input',function(){charCount.textContent=this.value.length;});}
-        
-        const form=document.getElementById('contact-form');
-        if(form){form.addEventListener('submit',function(e){e.preventDefault();const f=new FormData(this);const name=f.get('name');const email=f.get('email');if(!name||!email){alert('Veuillez remplir tous les champs obligatoires.');
-        return;
-        }alert(((window.I18N_DICT&&window.I18N_DICT['contact.form.success'])||'Merci !')+` ${name}!`);this.reset();charCount.textContent='0';});}
-        
-        const inputs=document.querySelectorAll('.form-input, .form-textarea');
-        inputs.forEach(i=>{
-            i.addEventListener('blur',function(){
-                if(this.hasAttribute('required')&&!this.value.trim()){
-                    this.style.borderColor='#ef4444';
-                }else if(this.type==='email'&&this.value&&!this.validity.valid){
-                    this.style.borderColor='#ef4444';
-                }else{
-                    this.style.borderColor='var(--border-light)';
-                }
-            });
-            
-            i.addEventListener('focus',function(){
-                this.style.borderColor='var(--primary-color)';
-            });
-        });
-        
-        document.addEventListener('click',function(e){
-            const menu=document.getElementById('nav-menu');
-            const toggle=document.querySelector('.nav__toggle');
-            
-            if(!menu.contains(e.target)&&!toggle.contains(e.target)) menu.classList.remove('nav__menu--open');
-        });
     </script>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/i18n.js"></script>
 </body>
 </html>

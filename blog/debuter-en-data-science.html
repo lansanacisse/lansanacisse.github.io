@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment débuter en Data Science en 2025 - Blog | Lansana CISSE</title>
+    <meta name="description" content="Guide pratique pour commencer une carrière en Data Science : compétences essentielles, outils incontournables et conseils pour réussir.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Comment débuter en Data Science en 2025">
+    <meta property="og:description" content="Guide pratique pour commencer une carrière en Data Science">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://lansanacisse.github.io/blog/debuter-en-data-science.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Canvas arrière-plan animé -->
+    <canvas id="bg-network" aria-hidden="true"></canvas>
+
+    <!-- Skip link pour l'accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Navigation principale">
+                <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+                <a href="../index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
+                <ul class="nav__menu" id="nav-menu">
+                    <li><a href="../index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../projets.html" class="nav__link" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="../competences.html" class="nav__link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="../experiences.html" class="nav__link" data-i18n="nav.experiences">Expériences</a></li>
+                    <li><a href="../blog.html" class="nav__link nav__link--active" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="../contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="../assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener" data-i18n="nav.cv">Télécharger CV</a></li>
+                    <li class="nav__lang-switch">
+                        <div class="lang-switch" id="lang-switch" aria-label="Language selector">
+                            <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+                            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <div class="container">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="../index.html">Accueil</a></li>
+                <li class="breadcrumb__item"><a href="../blog.html">Blog</a></li>
+                <li class="breadcrumb__item">Comment débuter en Data Science en 2025</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main id="main-content">
+        <!-- Article Header -->
+        <section class="section">
+            <div class="container">
+                <article class="card" style="max-width: 800px; margin: 0 auto;">
+                    <div class="card__header">
+                        <div class="tags" style="margin-bottom: var(--space-md);">
+                            <span class="tag tag--primary">Carrière</span>
+                            <span class="tag">Débutant</span>
+                            <span class="tag">Conseils</span>
+                            <span class="tag">Formation</span>
+                        </div>
+                        <h1 class="card__title" style="font-size: 2.5rem; margin-bottom: var(--space-sm);">
+                            Comment débuter en Data Science en 2025
+                        </h1>
+                        <p class="card__subtitle" style="font-size: 1.125rem; color: var(--text-light); margin-bottom: var(--space-lg);">
+                            Votre roadmap complète pour commencer une carrière passionnante en science des données
+                        </p>
+                        <div style="display: flex; align-items: center; gap: var(--space-md); color: var(--text-muted); font-size: 0.875rem;">
+                            <span>20 août 2025</span>
+                            <span>6 min de lecture</span>
+                            <span>Lansana CISSE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card__content" style="line-height: 1.7; font-size: 1.1rem;">
+                        <h2>Pourquoi la Data Science ?</h2>
+                        <p>
+                            La Data Science est l'un des domaines les plus demandés aujourd'hui. Chaque entreprise génère des données, 
+                            et il faut des experts pour les transformer en insights précieux. Que vous veniez des mathématiques, 
+                            de l'informatique, ou même d'un tout autre domaine, il n'est jamais trop tard pour commencer !
+                        </p>
+
+                        <div class="card" style="background: var(--bg-light); padding: var(--space-md); margin: var(--space-lg) 0;">
+                            <h3 style="color: var(--primary-color); margin-bottom: var(--space-sm);">Quelques chiffres qui parlent</h3>
+                            <ul style="margin: 0;">
+                                <li><strong>22% de croissance</strong> prévue jusqu'en 2030</li>
+                                <li><strong>Salaire médian :</strong> 45-80k€ selon l'expérience</li>
+                                <li><strong>Secteurs variés :</strong> Santé, Finance, E-commerce, IA...</li>
+                            </ul>
+                        </div>
+
+                        <h2>Les compétences essentielles</h2>
+
+                        <h3>1. Programmation : Python en priorité</h3>
+                        <p>
+                            Python est LE langage incontournable en Data Science. Il est simple à apprendre et possède 
+                            des bibliothèques puissantes :
+                        </p>
+                        <ul>
+                            <li><strong>Pandas</strong> : Manipulation des données</li>
+                            <li><strong>NumPy</strong> : Calculs numériques</li>
+                            <li><strong>Matplotlib/Seaborn</strong> : Visualisation</li>
+                            <li><strong>Scikit-learn</strong> : Machine Learning</li>
+                        </ul>
+
+                        <div class="card" style="background: var(--bg-gray); padding: var(--space-md); margin: var(--space-md) 0;">
+                            <h4 style="color: var(--accent-color);">Conseil pratique</h4>
+                            <p style="margin: 0;">Commencez par 30 minutes de Python par jour sur des plateformes comme 
+                            <strong>Codecademy</strong> ou <strong>DataCamp</strong>. La régularité prime sur l'intensité !</p>
+                        </div>
+
+                        <h3>2. Statistiques et mathématiques</h3>
+                        <p>Pas besoin d'être un génie en maths, mais quelques bases sont nécessaires :</p>
+                        <ul>
+                            <li><strong>Statistiques descriptives</strong> : Moyenne, médiane, écart-type</li>
+                            <li><strong>Probabilités</strong> : Distribution, corrélation</li>
+                            <li><strong>Tests statistiques</strong> : T-test, chi-carré</li>
+                            <li><strong>Algèbre linéaire</strong> : Vecteurs, matrices (pour le ML)</li>
+                        </ul>
+
+                        <h3>3. Machine Learning</h3>
+                        <p>Le cœur de la Data Science moderne. Commencez simple :</p>
+
+                        <div class="stats-table" style="margin: var(--space-lg) 0;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Algorithmes à maîtriser</th>
+                                        <th>Cas d'usage</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Supervisé</td>
+                                        <td>Régression linéaire, Random Forest</td>
+                                        <td>Prédiction de prix, classification</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Non-supervisé</td>
+                                        <td>K-means, PCA</td>
+                                        <td>Segmentation clients, réduction de dimension</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Deep Learning</td>
+                                        <td>Réseaux de neurones, CNN</td>
+                                        <td>Vision par ordinateur, NLP</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2>Les outils incontournables</h2>
+
+                        <h3>Environment de développement</h3>
+                        <ul>
+                            <li><strong>Jupyter Notebook</strong> : Idéal pour l'exploration</li>
+                            <li><strong>VS Code</strong> : Éditeur polyvalent avec extensions Python</li>
+                            <li><strong>Google Colab</strong> : Gratuit avec GPU pour le deep learning</li>
+                        </ul>
+
+                        <h3>Gestion des données</h3>
+                        <ul>
+                            <li><strong>SQL</strong> : Indispensable pour interroger les bases de données</li>
+                            <li><strong>Excel</strong> : Toujours utile pour l'analyse rapide</li>
+                            <li><strong>Apache Spark</strong> : Pour les gros volumes (niveau avancé)</li>
+                        </ul>
+
+                        <h2>Votre plan d'action en 6 mois</h2>
+
+                        <div class="card" style="background: var(--primary-color); color: white; padding: var(--space-lg); margin: var(--space-xl) 0;">
+                            <h3 style="color: white; margin-bottom: var(--space-md);">Roadmap recommandée</h3>
+                            
+                            <div style="display: grid; gap: var(--space-md);">
+                                <div style="padding: var(--space-sm); background: rgba(255,255,255,0.1); border-radius: 8px;">
+                                    <strong>Mois 1-2 : Fondations</strong>
+                                    <p style="margin: var(--space-xs) 0 0 0; font-size: 0.9rem;">
+                                        Python basics, Pandas, NumPy, premiers graphiques
+                                    </p>
+                                </div>
+                                
+                                <div style="padding: var(--space-sm); background: rgba(255,255,255,0.1); border-radius: 8px;">
+                                    <strong>Mois 3-4 : Exploration et analyse</strong>
+                                    <p style="margin: var(--space-xs) 0 0 0; font-size: 0.9rem;">
+                                        Statistiques, SQL, projets d'analyse exploratoire
+                                    </p>
+                                </div>
+                                
+                                <div style="padding: var(--space-sm); background: rgba(255,255,255,0.1); border-radius: 8px;">
+                                    <strong>Mois 5-6 : Machine Learning</strong>
+                                    <p style="margin: var(--space-xs) 0 0 0; font-size: 0.9rem;">
+                                        Scikit-learn, premiers modèles, projets complets
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Ressources pour apprendre</h2>
+
+                        <h3>Formations en ligne</h3>
+                        <ul>
+                            <li><strong>Coursera</strong> : Cours universitaires (Andrew Ng, IBM)</li>
+                            <li><strong>DataCamp</strong> : Spécialisé Data Science, très pratique</li>
+                            <li><strong>Kaggle Learn</strong> : Gratuit et orienté pratique</li>
+                            <li><strong>OpenClassrooms</strong> : En français, parcours complets</li>
+                        </ul>
+
+                        <h3>Projets pour pratiquer</h3>
+                        <ul>
+                            <li><strong>Kaggle</strong> : Compétitions et datasets</li>
+                            <li><strong>GitHub</strong> : Partagez vos projets</li>
+                            <li><strong>Datasets publics</strong> : data.gouv.fr, UCI ML Repository</li>
+                        </ul>
+
+                        <div class="card" style="background: var(--bg-light); padding: var(--space-md); margin: var(--space-lg) 0;">
+                            <h3 style="color: var(--primary-color); margin-bottom: var(--space-sm);">Idées de premiers projets</h3>
+                            <ul style="margin: 0;">
+                                <li>Analyse des ventes d'une boutique (Excel + Python)</li>
+                                <li>Prédiction de prix immobiliers</li>
+                                <li>Analyse de sentiment sur des avis clients</li>
+                                <li>Recommandation de films</li>
+                            </ul>
+                        </div>
+
+                        <h2>Les erreurs à éviter</h2>
+
+                        <h3>Pièges classiques</h3>
+                        <ul>
+                            <li><strong>Vouloir tout apprendre</strong> : Focalisez-vous sur Python d'abord</li>
+                            <li><strong>Théorie sans pratique</strong> : 80% pratique, 20% théorie</li>
+                            <li><strong>Perfectionnisme</strong> : Mieux vaut un projet imparfait que pas de projet</li>
+                            <li><strong>Isolement</strong> : Rejoignez des communautés (Discord, Reddit)</li>
+                        </ul>
+
+                        <h2>Comment décrocher son premier job</h2>
+
+                        <h3>Construire un portfolio</h3>
+                        <p>
+                            Votre portfolio GitHub est votre meilleur CV. Incluez :
+                        </p>
+                        <ul>
+                            <li>3-5 projets complets avec du code propre</li>
+                            <li>Un README détaillé pour chaque projet</li>
+                            <li>Des visualisations attractives</li>
+                            <li>Une variété de techniques (ML, analyse, visualisation)</li>
+                        </ul>
+
+                        <h3>Networking et opportunités</h3>
+                        <ul>
+                            <li><strong>LinkedIn</strong> : Partagez vos projets et insights</li>
+                            <li><strong>Meetups</strong> : Événements Data Science locaux</li>
+                            <li><strong>Stages</strong> : Excellent moyen de commencer</li>
+                            <li><strong>Freelance</strong> : Projets courts pour gagner en expérience</li>
+                        </ul>
+
+                        <h2>Conclusion</h2>
+                        <p>
+                            La Data Science est un domaine passionnant et accessible. Avec de la motivation et les bonnes ressources, 
+                            vous pouvez maîtriser les bases en quelques mois et décrocher votre premier poste dans l'année.
+                        </p>
+
+                        <p>
+                            Rappelez-vous : chaque expert a été débutant un jour. L'important est de commencer maintenant, 
+                            même avec 15 minutes par jour. Votre futur vous en data science commence aujourd'hui !
+                        </p>
+                    </div>
+
+                    <div class="card__footer" style="border-top: 1px solid var(--border-light); padding-top: var(--space-lg); margin-top: var(--space-xl);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md);">
+                            <div>
+                                <h4 style="margin-bottom: var(--space-xs);">Partager cet article</h4>
+                                <div style="display: flex; gap: var(--space-sm);">
+                                    <a href="#" class="btn btn--small btn--secondary">LinkedIn</a>
+                                    <a href="#" class="btn btn--small btn--secondary">Twitter</a>
+                                    <a href="#" class="btn btn--small btn--secondary">Email</a>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <p style="color: var(--text-muted); font-size: 0.875rem; margin: 0;">
+                                    Dernière mise à jour : 20 août 2025
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Navigation entre articles -->
+                <div style="max-width: 800px; margin: var(--space-xl) auto 0;">
+                    <div class="grid grid-2">
+                        <div class="card" style="text-align: center; padding: var(--space-md);">
+                            <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: var(--space-xs);">Article précédent</p>
+                            <a href="etapes-cles-systeme-rag.html" class="btn btn--secondary">← Étapes clés système RAG</a>
+                        </div>
+                        <div class="card" style="text-align: center; padding: var(--space-md);">
+                            <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: var(--space-xs);">Article suivant</p>
+                            <span style="color: var(--text-muted);">Bientôt disponible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <ul class="footer__links">
+                    <li><a href="mailto:lansana6c@gmail.com" class="footer__link" aria-label="Email">✉️</a></li>
+                    <li><a href="https://linkedin.com/in/lansana-cisse" class="footer__link" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a></li>
+                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></a></li>
+                </ul>
+            </div>
+            <p class="footer__copyright" data-i18n="footer.rights">© 2025 Lansana CISSE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMenu(){
+            const menu=document.getElementById('nav-menu');
+            const toggle=document.querySelector('.nav__toggle');
+            const isOpen=menu.classList.toggle('nav__menu--open');
+            toggle.setAttribute('aria-expanded', isOpen);
+            toggle.setAttribute('aria-label', isOpen? 'Fermer le menu':'Ouvrir le menu');
+            toggle.textContent = isOpen ? '✕' : '☰';
+        }
+        document.addEventListener('click',function(event){
+            const menu=document.getElementById('nav-menu');
+            const toggle=document.querySelector('.nav__toggle');
+            if(!menu.contains(event.target)&&!toggle.contains(event.target)){
+                menu.classList.remove('nav__menu--open');
+                toggle.setAttribute('aria-expanded','false');
+                toggle.setAttribute('aria-label','Ouvrir le menu');
+                toggle.textContent='☰';
+            }
+        });
+        document.querySelectorAll('#nav-menu a').forEach(a=>{
+            a.addEventListener('click',()=>{
+                if(window.innerWidth<=768){
+                    const menu=document.getElementById('nav-menu');
+                    const toggle=document.querySelector('.nav__toggle');
+                    menu.classList.remove('nav__menu--open');
+                    toggle.setAttribute('aria-expanded','false');
+                    toggle.setAttribute('aria-label','Ouvrir le menu');
+                    toggle.textContent='☰';
+                }
+            });
+        });
+    </script>
+    <script src="../assets/js/i18n.js"></script>
+</body>
+</html>

@@ -14,6 +14,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
 </head>
 <body>
     <!-- Skip link -->
@@ -25,7 +26,7 @@
             <nav class="nav" role="navigation" aria-label="Navigation principale">
                 <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
                 
-                <button class="nav__toggle" aria-label="Ouvrir le menu" data-i18n-aria-label="nav.toggle" onclick="toggleMenu()">☰</button>
+                <button class="nav__toggle" aria-label="Ouvrir le menu" data-i18n-aria-label="nav.toggle">☰</button>
                 
                 <ul class="nav__menu" id="nav-menu">
                     <li><a href="index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
@@ -69,151 +70,151 @@
 
                 <!-- Filtres -->
                 <div class="filters">
-                    <button class="filter-btn active" data-filter="all" data-i18n="projects.filters.all" onclick="filterProjects('all', event)">Tous</button>
-                    <button class="filter-btn" data-filter="nlp" data-i18n="projects.filters.nlp" onclick="filterProjects('nlp', event)">NLP</button>
-                    <button class="filter-btn" data-filter="cv" data-i18n="projects.filters.cv" onclick="filterProjects('cv', event)">Computer Vision</button>
-                    <button class="filter-btn" data-filter="tabulaire" data-i18n="projects.filters.tabular" onclick="filterProjects('tabulaire', event)">Données tabulaires</button>
-                    <button class="filter-btn" data-filter="viz" data-i18n="projects.filters.viz" onclick="filterProjects('viz', event)">Visualisation</button>
+                    <button class="filter-btn active" data-filter="all" data-i18n="projects.filters.all">Tous</button>
+                    <button class="filter-btn" data-filter="nlp" data-i18n="projects.filters.nlp">NLP</button>
+                    <button class="filter-btn" data-filter="cv" data-i18n="projects.filters.cv">Computer Vision</button>
+                    <button class="filter-btn" data-filter="tabulaire" data-i18n="projects.filters.tabular">Données tabulaires</button>
+                    <button class="filter-btn" data-filter="viz" data-i18n="projects.filters.viz">Visualisation</button>
                 </div>
 
                 <!-- Grille de projets -->
                 <div class="grid grid-3" id="projects-grid">
-                    <!-- Projet 1 -->
-                    <article class="card project-card" data-category="tabulaire">
-                        <div class="card__header">
-                            <h3 class="card__title" data-i18n="projects.samples.defaultRisk.title">Prédiction de défaut de paiement</h3>
-                            <p class="card__subtitle" data-i18n="projects.samples.defaultRisk.subtitle">Classification • Machine Learning</p>
-                        </div>
-                        <div class="card__content">
-                            <p data-i18n="projects.samples.defaultRisk.desc">Développement d'un modèle de classification pour prédire les risques de défaut de paiement bancaire. Feature engineering poussé, gestion du déséquilibre des classes et optimisation d'hyperparamètres pour atteindre 89% de précision.</p>
-                            <div class="tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Scikit-learn</span>
-                                <span class="tag">XGBoost</span>
-                                <span class="tag">Pandas</span>
-                                <span class="tag">SMOTE</span>
-                            </div>
-                        </div>
-                        <div class="card__actions">
-                            <a href="#" class="btn btn--primary btn--small" data-i18n="projects.details">Voir détails</a>
-                            <a href="#" class="btn btn--secondary btn--small" data-i18n="projects.github">Code GitHub</a>
-                        </div>
-                    </article>
-
-                    <!-- Projet 2 -->
+                    <!-- Projet 1: Nkaran -->
                     <article class="card project-card" data-category="nlp">
                         <div class="card__header">
-                            <h3 class="card__title" data-i18n="projects.samples.twitterSentiment.title">Analyse de sentiment Twitter</h3>
-                            <p class="card__subtitle" data-i18n="projects.samples.twitterSentiment.subtitle">NLP • Deep Learning</p>
+                            <h3 class="card__title">Nkaran</h3>
+                            <p class="card__subtitle">Assistant vocal • Préservation linguistique</p>
                         </div>
                         <div class="card__content">
-                            <p data-i18n="projects.samples.twitterSentiment.desc">Classification automatique de sentiments sur 100k tweets en français. Preprocessing NLP avancé, word embeddings et modèle LSTM pour obtenir 92% d'accuracy sur le dataset de test.</p>
+                            <p>Assistant vocal et textuel interactif pour préserver et transmettre la langue Diakhanké. Combinaison de technologie moderne et patrimoine culturel pour une expérience d'apprentissage immersive.</p>
                             <div class="tags">
                                 <span class="tag">Python</span>
-                                <span class="tag">NLTK</span>
-                                <span class="tag">TensorFlow</span>
-                                <span class="tag">Word2Vec</span>
-                                <span class="tag">LSTM</span>
-                            </div>
-                        </div>
-                        <div class="card__actions">
-                            <a href="#" class="btn btn--primary btn--small" data-i18n="projects.details">Voir détails</a>
-                            <a href="#" class="btn btn--secondary btn--small" data-i18n="projects.github">Code GitHub</a>
-                        </div>
-                    </article>
-
-                    <!-- Projet 3 -->
-                    <article class="card project-card" data-category="viz">
-                        <div class="card__header">
-                            <h3 class="card__title" data-i18n="projects.samples.salesDashboard.title">Dashboard ventes interactif</h3>
-                            <p class="card__subtitle" data-i18n="projects.samples.salesDashboard.subtitle">Business Intelligence • Visualisation</p>
-                        </div>
-                        <div class="card__content">
-                            <p data-i18n="projects.samples.salesDashboard.desc">Tableau de bord temps réel pour analyser les performances commerciales d'une PME. KPIs dynamiques, filtres interactifs et prédictions de tendances avec mise à jour automatique.</p>
-                            <div class="tags">
-                                <span class="tag">Plotly</span>
+                                <span class="tag">Speech Recognition</span>
+                                <span class="tag">NLP</span>
                                 <span class="tag">Streamlit</span>
-                                <span class="tag">SQL</span>
-                                <span class="tag">PostgreSQL</span>
-                                <span class="tag">Prophet</span>
+                                <span class="tag">Cultural AI</span>
                             </div>
                         </div>
                         <div class="card__actions">
-                            <a href="#" class="btn btn--primary btn--small" data-i18n="projects.details">Voir détails</a>
-                            <a href="#" class="btn btn--secondary btn--small" data-i18n="projects.github">Code GitHub</a>
+                            <a href="projets/nkaran.html" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="https://github.com/lansanacisse/Nkaran" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
                         </div>
                     </article>
 
-                    <!-- Projet 4 -->
-                    <article class="card project-card" data-category="cv">
-                        <div class="card__header">
-                            <h3 class="card__title" data-i18n="projects.samples.medicalImages.title">Classification d'images médicales</h3>
-                            <p class="card__subtitle" data-i18n="projects.samples.medicalImages.subtitle">Computer Vision • CNN</p>
-                        </div>
-                        <div class="card__content">
-                            <p data-i18n="projects.samples.medicalImages.desc">Modèle CNN pour classifier des radiographies pulmonaires et détecter des pneumonies. Transfer learning avec ResNet50, data augmentation et validation sur dataset médical standardisé.</p>
-                            <div class="tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">TensorFlow</span>
-                                <span class="tag">Keras</span>
-                                <span class="tag">OpenCV</span>
-                                <span class="tag">ResNet</span>
-                            </div>
-                        </div>
-                        <div class="card__actions">
-                            <a href="#" class="btn btn--primary btn--small" data-i18n="projects.details">Voir détails</a>
-                            <a href="#" class="btn btn--secondary btn--small" data-i18n="projects.github">Code GitHub</a>
-                        </div>
-                    </article>
-
-                    <!-- Projet 5 -->
-                    <article class="card project-card" data-category="tabulaire">
-                        <div class="card__header">
-                            <h3 class="card__title" data-i18n="projects.samples.realEstate.title">Prédiction prix immobilier</h3>
-                            <p class="card__subtitle" data-i18n="projects.samples.realEstate.subtitle">Régression • Feature Engineering</p>
-                        </div>
-                        <div class="card__content">
-                            <p data-i18n="projects.samples.realEstate.desc">Modèle de régression pour estimer les prix immobiliers en région parisienne. Géolocalisation, feature engineering spatial et ensemble de modèles pour R² = 0.87.</p>
-                            <div class="tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Scikit-learn</span>
-                                <span class="tag">GeoPandas</span>
-                                <span class="tag">Random Forest</span>
-                                <span class="tag">API REST</span>
-                            </div>
-                        </div>
-                        <div class="card__actions">
-                            <a href="#" class="btn btn--primary btn--small" data-i18n="projects.details">Voir détails</a>
-                            <a href="#" class="btn btn--secondary btn--small" data-i18n="projects.github">Code GitHub</a>
-                        </div>
-                    </article>
-
-                    <!-- Projet 6 -->
+                    <!-- Projet 2: Nnakouri -->
                     <article class="card project-card" data-category="nlp">
                         <div class="card__header">
-                            <h3 class="card__title" data-i18n="projects.samples.recommendation.title">Système de recommandation</h3>
-                            <p class="card__subtitle" data-i18n="projects.samples.recommendation.subtitle">Recommandation • Collaborative Filtering</p>
+                            <h3 class="card__title">Nnakouri</h3>
+                            <p class="card__subtitle">Assistant culinaire • RAG</p>
                         </div>
                         <div class="card__content">
-                            <p data-i18n="projects.samples.recommendation.desc">Système de recommandation de films basé sur le filtrage collaboratif et l'analyse de contenu. Matrice de factorisation et similarité cosinus pour suggestions personnalisées.</p>
+                            <p>Assistant culinaire intelligent basé sur la RAG proposant des recettes africaines authentiques. Utilise l'API Wikipédia pour enrichir les connaissances et offrir des conseils personnalisés.</p>
                             <div class="tags">
                                 <span class="tag">Python</span>
-                                <span class="tag">Surprise</span>
-                                <span class="tag">NMF</span>
-                                <span class="tag">Cosine Similarity</span>
-                                <span class="tag">Flask</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">Wikipédia API</span>
+                                <span class="tag">LangChain</span>
                             </div>
                         </div>
                         <div class="card__actions">
-                            <a href="#" class="btn btn--primary btn--small" data-i18n="projects.details">Voir détails</a>
-                            <a href="#" class="btn btn--secondary btn--small" data-i18n="projects.github">Code GitHub</a>
+                            <a href="projets/nnakouri.html" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="https://github.com/lansanacisse/Nnakouri" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 3: SISE Classmate -->
+                    <article class="card project-card" data-category="nlp">
+                        <div class="card__header">
+                            <h3 class="card__title">SISE Classmate</h3>
+                            <p class="card__subtitle">Assistant éducatif • Multi-LLM</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Assistant éducatif intelligent utilisant Mistral AI et Google Gemini pour fournir des explications personnalisées et corriger des exercices en informatique.</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Mistral AI</span>
+                                <span class="tag">Google Gemini</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">Education</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="projets/sise-classmate.html" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="https://github.com/lansanacisse/sise-classmate" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 4: Analyse de sentiment Airlines -->
+                    <article class="card project-card" data-category="nlp">
+                        <div class="card__header">
+                            <h3 class="card__title">Sentiment Analysis Airlines</h3>
+                            <p class="card__subtitle">NLP • Classification</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Application Streamlit d'analyse de sentiments des tweets sur les compagnies aériennes américaines, avec visualisations interactives et nuages de mots.</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">NLTK</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="projets/sentiment-analysis-airlines.html" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="https://github.com/lansanacisse/us-airlines-tweet-sentiment-streamlit" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 5: Iris Predictor MLOps -->
+                    <article class="card project-card" data-category="tabulaire">
+                        <div class="card__header">
+                            <h3 class="card__title">Iris Predictor MLOps</h3>
+                            <p class="card__subtitle">MLOps • Production</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Projet MLOps complet pour la classification de fleurs Iris via une application web Dockerisée, alliant FastAPI, Streamlit, MongoDB et Scikit-learn.</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">MLOps</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="projets/iris-mlops.html" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="https://github.com/lansanacisse/iris-predictor-mlops" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 6: MNLMIXTE Package R -->
+                    <article class="card project-card" data-category="tabulaire">
+                        <div class="card__header">
+                            <h3 class="card__title">MNLMIXTE</h3>
+                            <p class="card__subtitle">Package R • Statistiques</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Package R pour la régression logistique multinomiale sur données mixtes (catégorielles et numériques), développé dans le cadre du Master 2 SISE.</p>
+                            <div class="tags">
+                                <span class="tag">R</span>
+                                <span class="tag">Statistiques</span>
+                                <span class="tag">CRAN</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">C++</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="projets/mnlmixte-r.html" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="https://github.com/lansanacisse/mnlmixte" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
                         </div>
                     </article>
                 </div>
 
                 <!-- Message si aucun projet -->
                 <div id="no-projects" class="text-center mt-xl hidden">
-                    <p style="color: var(--text-light); font-size: 1.125rem;" data-i18n="projects.none">Aucun projet trouvé pour cette catégorie.</p>
+                    <p class="subtitle--large" data-i18n="projects.none">Aucun projet trouvé pour cette catégorie.</p>
                 </div>
             </div>
         </section>
@@ -234,39 +235,8 @@
     </footer>
 
     <!-- JavaScript -->
-    <script>
-        function toggleMenu(){
-            const menu=document.getElementById('nav-menu');
-            const toggle=document.querySelector('.nav__toggle');
-            const isOpen=menu.classList.toggle('nav__menu--open');
-            toggle.setAttribute('aria-expanded', isOpen);
-            toggle.setAttribute('aria-label', isOpen? 'Fermer le menu':'Ouvrir le menu');
-            toggle.textContent = isOpen ? '✕' : '☰';
-        }
-        document.addEventListener('click',function(e){
-            const menu=document.getElementById('nav-menu');
-            const t=document.querySelector('.nav__toggle');
-            if(!menu.contains(e.target)&&!t.contains(e.target)) {
-                menu.classList.remove('nav__menu--open');
-                t.setAttribute('aria-expanded','false');
-                t.setAttribute('aria-label','Ouvrir le menu');
-                t.textContent='☰';
-            }
-        });
-        document.querySelectorAll('#nav-menu a').forEach(a=>{
-            a.addEventListener('click',()=>{
-                if(window.innerWidth<=768){
-                    const menu=document.getElementById('nav-menu');
-                    const toggle=document.querySelector('.nav__toggle');
-                    menu.classList.remove('nav__menu--open');
-                    toggle.setAttribute('aria-expanded','false');
-                    toggle.setAttribute('aria-label','Ouvrir le menu');
-                    toggle.textContent='☰';
-                }
-            });
-        });
-        function filterProjects(category, event){const projects=document.querySelectorAll('.project-card');const buttons=document.querySelectorAll('.filter-btn');const noProjectsMsg=document.getElementById('no-projects');let visibleCount=0;buttons.forEach(btn=>btn.classList.remove('active')); if(event) event.target.classList.add('active'); projects.forEach(project=>{if(category==='all'||project.dataset.category===category){project.style.display='block';visibleCount++;}else{project.style.display='none';}}); if(visibleCount===0){noProjectsMsg.classList.remove('hidden');}else{noProjectsMsg.classList.add('hidden');}}
-    </script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/projects.js"></script>
     <script src="./assets/js/i18n.js"></script>
 </body>
 </html>

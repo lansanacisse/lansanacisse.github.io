@@ -14,6 +14,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
 </head>
 <body>
     <!-- Skip link -->
@@ -24,7 +25,7 @@
         <div class="container">
             <nav class="nav" role="navigation" aria-label="Navigation principale">
                 <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
-                <button class="nav__toggle" aria-label="Ouvrir le menu" data-i18n-aria-label="nav.toggle" onclick="toggleMenu()">☰</button>
+                <button class="nav__toggle" aria-label="Ouvrir le menu" data-i18n-aria-label="nav.toggle">☰</button>
                 <ul class="nav__menu" id="nav-menu">
                     <li><a href="index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
                     <li><a href="projets.html" class="nav__link" data-i18n="nav.projects">Projets</a></li>
@@ -59,21 +60,69 @@
                 </div>
 
                 <!-- Articles de blog -->
-                <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
-                    <div class="card__content">
-                        <h2 class="card__title" data-i18n="blog.soon.title">🚧 Ça arrive bientôt !</h2>
-                        <p data-i18n="blog.soon.text">Je travaille actuellement sur la création de contenu pour cette section. Restez connecté pour découvrir mes articles sur la data science, le machine learning et l'IA.</p>
-                    </div>
+                <div class="grid grid-2 grid--spaced">
+                    <!-- Article 1 - RAG -->
+                    <article class="card">
+                        <div class="card__header">
+                            <div class="tags tags--spaced">
+                                <span class="tag tag--primary">IA</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">NLP</span>
+                            </div>
+                            <h2 class="card__title">
+                                <a href="./blog/etapes-cles-systeme-rag.html" class="link--inherit">
+                                    Les étapes clés d'un système RAG
+                                </a>
+                            </h2>
+                            <p class="card__subtitle">Guide complet pour comprendre et implémenter un système de Retrieval-Augmented Generation</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Découvrez les 5 étapes essentielles pour construire un système RAG efficace, de la collecte des données à la génération augmentée...</p>
+                            <div class="meta-info meta-info--small">
+                                <span>📅 19 août 2025</span>
+                                <span>⏱️ 8 min</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="./blog/etapes-cles-systeme-rag.html" class="btn btn--primary btn--small">Lire l'article</a>
+                        </div>
+                    </article>
+
+                    <!-- Article à venir -->
+                    <article class="card opacity-70">
+                        <div class="card__header">
+                            <div class="tags tags--spaced">
+                                <span class="tag">Python</span>
+                                <span class="tag">Data Science</span>
+                            </div>
+                            <h2 class="card__title">Optimisation des pipelines ML avec Python</h2>
+                            <p class="card__subtitle">Techniques avancées pour accélérer vos workflows de machine learning</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Bientôt disponible... Découvrez comment optimiser vos pipelines de machine learning pour des performances maximales.</p>
+                            <div class="meta-info meta-info--small">
+                                <span>📅 Bientôt</span>
+                                <span>⏱️ ~10 min</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <span class="btn btn--secondary btn--small btn--disabled">Bientôt disponible</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center">
+                    <p class="text--muted-italic">Plus d'articles arrivent bientôt...</p>
                 </div>
 
                 <!-- Newsletter subscription -->
-                <section class="section section--light" style="margin-top: var(--space-2xl);">
+                <section class="section section--light section--spaced">
                     <div class="container">
-                        <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+                        <div class="card card--medium">
                             <div class="card__content">
                                 <h2 class="card__title" data-i18n="blog.newsletter.title">📬 Restez informé</h2>
-                                <p style="margin-bottom: var(--space-lg);" data-i18n="blog.newsletter.text">Recevez mes derniers articles et découvertes en data science directement dans votre boîte mail. Pas de spam, que du contenu de qualité !</p>
-                                <form class="form" style="text-align: left;">
+                                <p class="subtitle--large" data-i18n="blog.newsletter.text">Recevez mes derniers articles et découvertes en data science directement dans votre boîte mail. Pas de spam, que du contenu de qualité !</p>
+                                <form class="form form--left-aligned">
                                     <div class="form-group">
                                         <label for="newsletter-email" class="form-label" data-i18n="form.email.label">Adresse email</label>
                                         <input 
@@ -87,7 +136,7 @@
                                     </div>
                                     <button type="submit" class="form-submit" data-i18n="blog.newsletter.button">S'abonner à la newsletter</button>
                                 </form>
-                                <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: var(--space-sm);" data-i18n="blog.newsletter.disclaimer">Vous pouvez vous désabonner à tout moment.</p>
+                                <p class="text--small-muted" data-i18n="blog.newsletter.disclaimer">Vous pouvez vous désabonner à tout moment.</p>
                             </div>
                         </div>
                     </div>
@@ -99,24 +148,24 @@
                         <div class="section__header">
                             <h2 class="section__title" data-i18n="blog.platforms.title">Retrouvez-moi aussi sur</h2>
                         </div>
-                        <div class="grid grid-3" style="max-width: 800px; margin: 0 auto;">
-                            <a href="#" class="card" style="text-decoration: none; color: inherit; transition: all 0.2s ease;">
-                                <div class="card__content" style="text-align: center;">
-                                    <div style="font-size: 3rem; margin-bottom: var(--space-sm);">📖</div>
+                        <div class="grid grid-3 grid--centered">
+                            <a href="#" class="card link--inherit transition-hover">
+                                <div class="card__content content--centered-overlay">
+                                    <div class="illustration">📖</div>
                                     <h3 class="card__title">Medium</h3>
                                     <p data-i18n="blog.platform.medium.desc">Articles approfondis sur la data science et le machine learning</p>
                                 </div>
                             </a>
-                            <a href="#" class="card" style="text-decoration: none; color: inherit; transition: all 0.2s ease;">
-                                <div class="card__content" style="text-align: center;">
-                                    <div style="font-size: 3rem; margin-bottom: var(--space-sm);">💻</div>
+                            <a href="#" class="card link--inherit transition-hover">
+                                <div class="card__content content--centered-overlay">
+                                    <div class="illustration">💻</div>
                                     <h3 class="card__title">GitHub</h3>
                                     <p data-i18n="blog.platform.github.desc">Codes sources, notebooks et tutoriels techniques</p>
                                 </div>
                             </a>
-                            <a href="#" class="card" style="text-decoration: none; color: inherit; transition: all 0.2s ease;">
-                                <div class="card__content" style="text-align: center;">
-                                    <div style="font-size: 3rem; margin-bottom: var(--space-sm);">💼</div>
+                            <a href="#" class="card link--inherit transition-hover">
+                                <div class="card__content content--centered-overlay">
+                                    <div class="illustration">💼</div>
                                     <h3 class="card__title">LinkedIn</h3>
                                     <p data-i18n="blog.platform.linkedin.desc">Actualités du secteur et partages d'expériences</p>
                                 </div>
@@ -143,42 +192,8 @@
     </footer>
 
     <!-- JavaScript -->
-    <script>
-        function toggleMenu(){
-            const m=document.getElementById('nav-menu');
-            const toggle=document.querySelector('.nav__toggle');
-            const isOpen=m.classList.toggle('nav__menu--open');
-            toggle.setAttribute('aria-expanded', isOpen);
-            toggle.setAttribute('aria-label', isOpen? 'Fermer le menu':'Ouvrir le menu');
-            toggle.textContent = isOpen ? '✕' : '☰';
-        }
-        // Fermer menu mobile
-        document.addEventListener('click',e=>{
-            const menu=document.getElementById('nav-menu');
-            const t=document.querySelector('.nav__toggle');
-            if(!menu.contains(e.target)&&!t.contains(e.target)) {
-                menu.classList.remove('nav__menu--open');
-                t.setAttribute('aria-expanded','false');
-                t.setAttribute('aria-label','Ouvrir le menu');
-                t.textContent='☰';
-            }
-        });
-        document.querySelectorAll('#nav-menu a').forEach(a=>{
-            a.addEventListener('click',()=>{
-                if(window.innerWidth<=768){
-                    const menu=document.getElementById('nav-menu');
-                    const toggle=document.querySelector('.nav__toggle');
-                    menu.classList.remove('nav__menu--open');
-                    toggle.setAttribute('aria-expanded','false');
-                    toggle.setAttribute('aria-label','Ouvrir le menu');
-                    toggle.textContent='☰';
-                }
-            });
-        });
-        
-        // Newsletter form
-        document.addEventListener('DOMContentLoaded',()=>{const f=document.querySelector('.form');if(f){f.addEventListener('submit',e=>{e.preventDefault();alert(window.I18N_DICT?.['blog.newsletter.success']||'Merci !');f.reset();});}});
-    </script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/blog.js"></script>
     <script src="./assets/js/i18n.js"></script>
 </body>
 </html>

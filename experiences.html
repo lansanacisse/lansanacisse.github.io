@@ -16,6 +16,7 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
 </head>
 <body>
     <!-- Skip link -->
@@ -27,7 +28,7 @@
             <nav class="nav" role="navigation" aria-label="Navigation principale">
                 <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
                 
-                <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+                <button class="nav__toggle" aria-label="Ouvrir le menu">☰</button>
                 
                 <ul class="nav__menu" id="nav-menu">
                     <li><a href="index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
@@ -256,42 +257,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('nav-menu');
-            const toggle = document.querySelector('.nav__toggle');
-            const isOpen = menu.classList.toggle('nav__menu--open');
-            toggle.setAttribute('aria-expanded', isOpen);
-            toggle.setAttribute('aria-label', isOpen? 'Fermer le menu':'Ouvrir le menu');
-            toggle.textContent = isOpen ? '✕' : '☰';
-        }
-        
-        // Fermer le menu mobile si on clique ailleurs
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('nav-menu');
-            const toggle = document.querySelector('.nav__toggle');
-            
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.classList.remove('nav__menu--open');
-                toggle.setAttribute('aria-expanded','false');
-                toggle.setAttribute('aria-label','Ouvrir le menu');
-                toggle.textContent='☰';
-            }
-        });
-        
-        document.querySelectorAll('#nav-menu a').forEach(a=>{
-            a.addEventListener('click',()=>{
-                if(window.innerWidth<=768){
-                    const menu=document.getElementById('nav-menu');
-                    const toggle=document.querySelector('.nav__toggle');
-                    menu.classList.remove('nav__menu--open');
-                    toggle.setAttribute('aria-expanded','false');
-                    toggle.setAttribute('aria-label','Ouvrir le menu');
-                    toggle.textContent='☰';
-                }
-            });
-        });
-    </script>
+    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/i18n.js"></script>
 </body>
 </html>
