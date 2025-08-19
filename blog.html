@@ -3,40 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Lansana CISSE | Junior Data Scientist</title>
-    <meta name="description" content="Articles et réflexions d'Lansana CISSE sur la data science, le machine learning et l'intelligence artificielle.">
+    <title data-i18n="blog.meta.title">Blog - Lansana CISSE | Junior Data Scientist</title>
+    <meta name="description" content="Articles et réflexions d'Lansana CISSE sur la data science, le machine learning et l'intelligence artificielle." data-i18n="blog.meta.description">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Blog - Lansana CISSE | Junior Data Scientist">
-    <meta property="og:description" content="Articles et réflexions sur la data science, le machine learning et l'IA.">
+    <meta property="og:title" content="Blog - Lansana CISSE | Junior Data Scientist" data-i18n="blog.meta.og.title">
+    <meta property="og:description" content="Articles et réflexions sur la data science, le machine learning et l'IA." data-i18n="blog.meta.og.description">
     <meta property="og:type" content="website">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <!-- Skip link -->
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link" data-i18n="a11y.skip">Aller au contenu principal</a>
 
     <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav" role="navigation" aria-label="Navigation principale">
-                <a href="index.html" class="nav__logo">Lansana CISSE</a>
-                
-                <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
-                
+                <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
+                <button class="nav__toggle" aria-label="Ouvrir le menu" data-i18n-aria-label="nav.toggle" onclick="toggleMenu()">☰</button>
                 <ul class="nav__menu" id="nav-menu">
-                    <li><a href="index.html" class="nav__link">Accueil</a></li>
-                    <li><a href="projets.html" class="nav__link">Projets</a></li>
-                    <li><a href="competences.html" class="nav__link">Compétences</a></li>
-                    <li><a href="experiences.html" class="nav__link">Expériences</a></li>
-                    <li><a href="blog.html" class="nav__link nav__link--active">Blog</a></li>
-                    <li><a href="contact.html" class="nav__link">Contact</a></li>
-                    <li><a href="./assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener">Télécharger CV</a></li>
+                    <li><a href="index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="projets.html" class="nav__link" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="competences.html" class="nav__link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="experiences.html" class="nav__link" data-i18n="nav.experiences">Expériences</a></li>
+                    <li><a href="blog.html" class="nav__link nav__link--active" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="./assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener" data-i18n="nav.cv">Télécharger CV</a></li>
+                    <li class="nav__lang-switch"><div class="lang-switch" id="lang-switch" aria-label="Language selector"><button type="button" data-lang="fr" aria-pressed="true">FR</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></li>
                 </ul>
             </nav>
         </div>
@@ -46,8 +43,8 @@
     <nav class="breadcrumb" aria-label="Fil d'Ariane">
         <div class="container">
             <ol class="breadcrumb__list">
-                <li class="breadcrumb__item"><a href="index.html">Accueil</a></li>
-                <li class="breadcrumb__item">Blog</li>
+                <li class="breadcrumb__item"><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                <li class="breadcrumb__item" data-i18n="nav.blog">Blog</li>
             </ol>
         </div>
     </nav>
@@ -57,20 +54,15 @@
         <section class="section">
             <div class="container">
                 <div class="section__header">
-                    <h1 class="section__title">Mon blog</h1>
-                    <p class="section__subtitle">
-                        Réflexions, tutoriels et découvertes en data science et intelligence artificielle
-                    </p>
+                    <h1 class="section__title" data-i18n="blog.title">Mon blog</h1>
+                    <p class="section__subtitle" data-i18n="blog.subtitle">Réflexions, tutoriels et découvertes en data science et intelligence artificielle</p>
                 </div>
 
                 <!-- Articles de blog -->
                 <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
                     <div class="card__content">
-                        <h2 class="card__title">🚧 Ça arrive bientôt !</h2>
-                        <p>
-                            Je travaille actuellement sur la création de contenu pour cette section. 
-                            Restez connecté pour découvrir mes articles sur la data science, le machine learning et l'IA.
-                        </p>
+                        <h2 class="card__title" data-i18n="blog.soon.title">🚧 Ça arrive bientôt !</h2>
+                        <p data-i18n="blog.soon.text">Je travaille actuellement sur la création de contenu pour cette section. Restez connecté pour découvrir mes articles sur la data science, le machine learning et l'IA.</p>
                     </div>
                 </div>
 
@@ -79,30 +71,23 @@
                     <div class="container">
                         <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
                             <div class="card__content">
-                                <h2 class="card__title">📬 Restez informé</h2>
-                                <p style="margin-bottom: var(--space-lg);">
-                                    Recevez mes derniers articles et découvertes en data science directement dans votre boîte mail. 
-                                    Pas de spam, que du contenu de qualité !
-                                </p>
+                                <h2 class="card__title" data-i18n="blog.newsletter.title">📬 Restez informé</h2>
+                                <p style="margin-bottom: var(--space-lg);" data-i18n="blog.newsletter.text">Recevez mes derniers articles et découvertes en data science directement dans votre boîte mail. Pas de spam, que du contenu de qualité !</p>
                                 <form class="form" style="text-align: left;">
                                     <div class="form-group">
-                                        <label for="newsletter-email" class="form-label">Adresse email</label>
+                                        <label for="newsletter-email" class="form-label" data-i18n="form.email.label">Adresse email</label>
                                         <input 
                                             type="email" 
                                             id="newsletter-email" 
                                             name="email" 
                                             class="form-input" 
-                                            placeholder="votre.email@exemple.com"
+                                            placeholder="votre.email@exemple.com" data-i18n="form.email.placeholder"
                                             required
                                         >
                                     </div>
-                                    <button type="submit" class="form-submit">
-                                        S'abonner à la newsletter
-                                    </button>
+                                    <button type="submit" class="form-submit" data-i18n="blog.newsletter.button">S'abonner à la newsletter</button>
                                 </form>
-                                <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: var(--space-sm);">
-                                    Vous pouvez vous désabonner à tout moment.
-                                </p>
+                                <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: var(--space-sm);" data-i18n="blog.newsletter.disclaimer">Vous pouvez vous désabonner à tout moment.</p>
                             </div>
                         </div>
                     </div>
@@ -112,31 +97,28 @@
                 <section class="section">
                     <div class="container">
                         <div class="section__header">
-                            <h2 class="section__title">Retrouvez-moi aussi sur</h2>
+                            <h2 class="section__title" data-i18n="blog.platforms.title">Retrouvez-moi aussi sur</h2>
                         </div>
-                        
                         <div class="grid grid-3" style="max-width: 800px; margin: 0 auto;">
                             <a href="#" class="card" style="text-decoration: none; color: inherit; transition: all 0.2s ease;">
                                 <div class="card__content" style="text-align: center;">
                                     <div style="font-size: 3rem; margin-bottom: var(--space-sm);">📖</div>
                                     <h3 class="card__title">Medium</h3>
-                                    <p>Articles approfondis sur la data science et le machine learning</p>
+                                    <p data-i18n="blog.platform.medium.desc">Articles approfondis sur la data science et le machine learning</p>
                                 </div>
                             </a>
-                            
                             <a href="#" class="card" style="text-decoration: none; color: inherit; transition: all 0.2s ease;">
                                 <div class="card__content" style="text-align: center;">
                                     <div style="font-size: 3rem; margin-bottom: var(--space-sm);">💻</div>
                                     <h3 class="card__title">GitHub</h3>
-                                    <p>Codes sources, notebooks et tutoriels techniques</p>
+                                    <p data-i18n="blog.platform.github.desc">Codes sources, notebooks et tutoriels techniques</p>
                                 </div>
                             </a>
-                            
                             <a href="#" class="card" style="text-decoration: none; color: inherit; transition: all 0.2s ease;">
                                 <div class="card__content" style="text-align: center;">
                                     <div style="font-size: 3rem; margin-bottom: var(--space-sm);">💼</div>
                                     <h3 class="card__title">LinkedIn</h3>
-                                    <p>Actualités du secteur et partages d'expériences</p>
+                                    <p data-i18n="blog.platform.linkedin.desc">Actualités du secteur et partages d'expériences</p>
                                 </div>
                             </a>
                         </div>
@@ -151,58 +133,24 @@
         <div class="container">
             <div class="footer__content">
                 <ul class="footer__links">
-                    <li><a href="mailto:alex.dupont@email.com" class="footer__link" aria-label="Email">✉️</a></li>
+                    <li><a href="mailto:lansana6c@gmail.com" class="footer__link" aria-label="Email">✉️</a></li>
                     <li><a href="https://linkedin.com/in/lansanacisse" class="footer__link" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a></li>
-                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener">🔗</a></li>
+                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></a></li>
                 </ul>
             </div>
-            <p class="footer__copyright">
-                © 2025 Lansana CISSE. Tous droits réservés.
-            </p>
+            <p class="footer__copyright" data-i18n="footer.rights">© 2025 Lansana CISSE. Tous droits réservés.</p>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('nav-menu');
-            menu.classList.toggle('nav__menu--open');
-        }
+        function toggleMenu(){const m=document.getElementById('nav-menu');m.classList.toggle('nav__menu--open');}
+        // Fermer menu mobile
+        document.addEventListener('click',e=>{const menu=document.getElementById('nav-menu');const t=document.querySelector('.nav__toggle');if(!menu.contains(e.target)&&!t.contains(e.target)) menu.classList.remove('nav__menu--open');});
         
-        // Gestion du formulaire newsletter
-        document.querySelector('.form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('newsletter-email').value;
-            
-            // Ici vous pourriez intégrer un service comme Mailchimp, ConvertKit, etc.
-            alert('Merci ! Votre inscription à la newsletter sera bientôt active. 📧');
-            
-            // Reset du formulaire
-            this.reset();
-        });
-        
-        // Animation hover pour les cartes de plateforme
-        document.querySelectorAll('a.card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-4px)';
-                this.style.boxShadow = 'var(--shadow-lg)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = 'var(--shadow-sm)';
-            });
-        });
-        
-        // Fermer le menu mobile si on clique ailleurs
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('nav-menu');
-            const toggle = document.querySelector('.nav__toggle');
-            
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.classList.remove('nav__menu--open');
-            }
-        });
+        // Newsletter form
+        document.addEventListener('DOMContentLoaded',()=>{const f=document.querySelector('.form');if(f){f.addEventListener('submit',e=>{e.preventDefault();alert(window.I18N_DICT?.['blog.newsletter.success']||'Merci !');f.reset();});}});
     </script>
+    <script src="./assets/js/i18n.js"></script>
 </body>
 </html>

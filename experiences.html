@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expériences & Formation - Lansana CISSE | Junior Data Scientist</title>
-    <meta name="description" content="Parcours professionnel et formation d'Lansana CISSE en data science : expériences, stages, certifications et diplômes.">
+    <title data-i18n="experience.page.title">Expériences & Formation - Lansana CISSE | Junior Data Scientist</title>
+    <meta name="description" content="Parcours professionnel et formation d'Lansana CISSE en data science : expériences, stages, certifications et diplômes." data-i18n="experience.page.description">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Expériences & Formation - Lansana CISSE | Junior Data Scientist">
-    <meta property="og:description" content="Parcours professionnel et formation d'Lansana CISSE en data science.">
+    <meta property="og:title" content="Expériences & Formation - Lansana CISSE | Junior Data Scientist" data-i18n="experience.page.og.title">
+    <meta property="og:description" content="Parcours professionnel et formation d'Lansana CISSE en data science." data-i18n="experience.page.og.description">
     <meta property="og:type" content="website">
     
     <!-- Favicon -->
@@ -19,24 +19,25 @@
 </head>
 <body>
     <!-- Skip link -->
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link" data-i18n="a11y.skip">Aller au contenu principal</a>
 
     <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav" role="navigation" aria-label="Navigation principale">
-                <a href="index.html" class="nav__logo">Lansana CISSE</a>
+                <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
                 
                 <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
                 
                 <ul class="nav__menu" id="nav-menu">
-                    <li><a href="index.html" class="nav__link">Accueil</a></li>
-                    <li><a href="projets.html" class="nav__link">Projets</a></li>
-                    <li><a href="competences.html" class="nav__link">Compétences</a></li>
-                    <li><a href="experiences.html" class="nav__link nav__link--active">Expériences</a></li>
-                    <li><a href="blog.html" class="nav__link">Blog</a></li>
-                    <li><a href="contact.html" class="nav__link">Contact</a></li>
-                    <li><a href="./assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener">Télécharger CV</a></li>
+                    <li><a href="index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="projets.html" class="nav__link" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="competences.html" class="nav__link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="experiences.html" class="nav__link nav__link--active" data-i18n="nav.experiences">Expériences</a></li>
+                    <li><a href="blog.html" class="nav__link" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="./assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener" data-i18n="nav.cv">Télécharger CV</a></li>
+                    <li class="nav__lang-switch"><div class="lang-switch" id="lang-switch" aria-label="Language selector"><button type="button" data-lang="fr" aria-pressed="true">FR</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></li>
                 </ul>
             </nav>
         </div>
@@ -47,7 +48,7 @@
         <div class="container">
             <ol class="breadcrumb__list">
                 <li class="breadcrumb__item"><a href="index.html">Accueil</a></li>
-                <li class="breadcrumb__item">Expériences & Formation</li>
+                <li class="breadcrumb__item" data-i18n="experience.breadcrumb.item">Expériences & Formation</li>
             </ol>
         </div>
     </nav>
@@ -57,8 +58,8 @@
         <section class="section">
             <div class="container">
                 <div class="section__header">
-                    <h1 class="section__title">Expériences & Formation</h1>
-                    <p class="section__subtitle">
+                    <h1 class="section__title" data-i18n="experience.title">Expériences & Formation</h1>
+                    <p class="section__subtitle" data-i18n="experience.subtitle">
                         Mon parcours professionnel et académique en data science
                     </p>
                 </div>
@@ -66,20 +67,20 @@
                 <div class="grid grid-2">
                     <!-- Expériences professionnelles -->
                     <div>
-                        <h2 class="mb-lg">💼 Expériences professionnelles</h2>
+                        <h2 class="mb-lg" data-i18n="experience.professional.title">💼 Expériences professionnelles</h2>
                         
                         <div class="timeline">
                             <article class="timeline-item">
                                 <div class="timeline-item__year">2025 - Présent</div>
-                                <h3 class="timeline-item__title">Stagiaire Data Scientist</h3>
-                                <div class="timeline-item__company">Airbus Operations SAS</div>
+                                <h3 class="timeline-item__title" data-i18n="experience.professional.airbus.title">Stagiaire Data Scientist</h3>
+                                <div class="timeline-item__company" data-i18n="experience.professional.airbus.company">Airbus Operations SAS</div>
                                 <div class="timeline-item__description">
-                                    <p>Projet : Data Science for Designing the Engine of Tomorrow</p>
+                                    <p data-i18n="experience.professional.airbus.project">Projet : Data Science for Designing the Engine of Tomorrow</p>
                                     <ul style="margin-left: var(--space-md); color: var(--text-light);">
-                                        <li>Conception et déploiement de pipelines d'ingénierie de données en Python pour automatiser l'extraction, la structuration et le traitement de rapports techniques non structurés (PDF, Word, Excel, OCR).</li>
-                                        <li>Développement et optimisation de Large Language Models (LLM) via fine-tuning et prompt engineering (Llama 3) pour la classification et la synthèse de documents techniques complexes.</li>
-                                        <li>Évaluation rigoureuse des modèles avec les métriques ROUGE et validation par des experts métiers pour garantir la fiabilité et la conformité aux exigences aéronautiques.</li>
-                                        <li>Formulation de recommandations stratégiques basées sur l'analyse des données pour prévenir les pannes et optimiser les spécifications des futurs systèmes de propulsion (ex : système nacelle anti-ice).</li>
+                                        <li data-i18n="experience.professional.airbus.task1">Conception et déploiement de pipelines d'ingénierie de données en Python pour automatiser l'extraction, la structuration et le traitement de rapports techniques non structurés (PDF, Word, Excel, OCR).</li>
+                                        <li data-i18n="experience.professional.airbus.task2">Développement et optimisation de Large Language Models (LLM) via fine-tuning et prompt engineering (Llama 3) pour la classification et la synthèse de documents techniques complexes.</li>
+                                        <li data-i18n="experience.professional.airbus.task3">Évaluation rigoureuse des modèles avec les métriques ROUGE et validation par des experts métiers pour garantir la fiabilité et la conformité aux exigences aéronautiques.</li>
+                                        <li data-i18n="experience.professional.airbus.task4">Formulation de recommandations stratégiques basées sur l'analyse des données pour prévenir les pannes et optimiser les spécifications des futurs systèmes de propulsion (ex : système nacelle anti-ice).</li>
                                     </ul>
                                     <p style="font-size: 0.875rem; color: var(--text-light); margin-top: var(--space-xs);">
                                         <strong>Technologies :</strong> Python, spaCy, PySpark, PyMuPDF4LLM, Llama, LangChain, Pandas, Git
@@ -89,19 +90,19 @@
 
                             <article class="timeline-item">
                                 <div class="timeline-item__year">Avr 2024 - Sep 2024</div>
-                                <h3 class="timeline-item__title">Data Analyst (Stagiaire)</h3>
-                                <div class="timeline-item__company">Orange</div>
+                                <h3 class="timeline-item__title" data-i18n="experience.professional.orange.title">Data Analyst (Stagiaire)</h3>
+                                <div class="timeline-item__company" data-i18n="experience.professional.orange.company">Orange</div>
                                 <div class="timeline-item__description">
-                                    <p><strong>Projet 1 :</strong> Analyse des délais de traitement des droits de réponse des fournisseurs</p>
+                                    <p><strong data-i18n="experience.professional.orange.project1">Projet 1 :</strong> Analyse des délais de traitement des droits de réponse des fournisseurs</p>
                                     <ul style="margin-left: var(--space-md); color: var(--text-light);">
-                                        <li>Analyse statistique approfondie des délais de réponse des fournisseurs pour les opérations sous-traitées aux UCI, avec Python (Pandas, SciPy, Matplotlib, Seaborn, Statsmodels).</li>
-                                        <li>Identification des UCI les plus performantes et moins performantes pour optimiser les processus internes.</li>
-                                        <li>Évaluation de l'impact des variables (valideur, département, UCI, mois, type d'entité) sur le temps de traitement, validée par des tests statistiques (ANOVA, Kruskal-Wallis).</li>
+                                        <li data-i18n="experience.professional.orange.project1.task1">Analyse statistique approfondie des délais de réponse des fournisseurs pour les opérations sous-traitées aux UCI, avec Python (Pandas, SciPy, Matplotlib, Seaborn, Statsmodels).</li>
+                                        <li data-i18n="experience.professional.orange.project1.task2">Identification des UCI les plus performantes et moins performantes pour optimiser les processus internes.</li>
+                                        <li data-i18n="experience.professional.orange.project1.task3">Évaluation de l'impact des variables (valideur, département, UCI, mois, type d'entité) sur le temps de traitement, validée par des tests statistiques (ANOVA, Kruskal-Wallis).</li>
                                     </ul>
-                                    <p><strong>Projet 2 :</strong> Conception et mise en œuvre d'une solution de monitoring des activités de sécurité</p>
+                                    <p><strong data-i18n="experience.professional.orange.project2">Projet 2 :</strong> Conception et mise en œuvre d'une solution de monitoring des activités de sécurité</p>
                                     <ul style="margin-left: var(--space-md); color: var(--text-light);">
-                                        <li>Développement d'une solution de monitoring des KPI sécurité via Power BI et Looker Studio.</li>
-                                        <li>Création de visualisations interactives et rapports automatisés avec PowerQuery et DAX, facilitant la prise de décision au niveau national et par unité opérationnelle.</li>
+                                        <li data-i18n="experience.professional.orange.project2.task1">Développement d'une solution de monitoring des KPI sécurité via Power BI et Looker Studio.</li>
+                                        <li data-i18n="experience.professional.orange.project2.task2">Création de visualisations interactives et rapports automatisés avec PowerQuery et DAX, facilitant la prise de décision au niveau national et par unité opérationnelle.</li>
                                     </ul>
                                     <p style="font-size: 0.875rem; color: var(--text-light); margin-top: var(--space-xs);">
                                         <strong>Technologies :</strong> Python, Pandas, SciPy, Matplotlib, Seaborn, Power BI, GCP, SQL, Looker Studio, Statsmodels
@@ -111,30 +112,30 @@
 
                             <article class="timeline-item">
                                 <div class="timeline-item__year">Sep 2023 - Mar 2024</div>
-                                <h3 class="timeline-item__title">Moniteur salle Informatique</h3>
-                                <div class="timeline-item__company">Université Lumière Lyon 2</div>
+                                <h3 class="timeline-item__title" data-i18n="experience.professional.univ.title">Moniteur salle Informatique</h3>
+                                <div class="timeline-item__company" data-i18n="experience.professional.univ.company">Université Lumière Lyon 2</div>
                                 <div class="timeline-item__description">
-                                    <p>Contrat étudiant à temps partiel, Lyon  - Présentiel</p>
+                                    <p data-i18n="experience.professional.univ.contract">Contrat étudiant à temps partiel, Lyon  - Présentiel</p>
                                     <ul style="margin-left: var(--space-md); color: var(--text-light);">
-                                        <li>Assistance technique et pédagogique aux étudiants sur les postes informatiques et logiciels spécialisés.</li>
-                                        <li>Gestion et maintenance de la salle informatique : installation de logiciels, résolution de problèmes matériels et réseau.</li>
-                                        <li>Veille au respect des règles d’utilisation et à la sécurité des équipements.</li>
-                                        <li>Support lors des examens et des travaux pratiques informatiques.</li>
+                                        <li data-i18n="experience.professional.univ.task1">Assistance technique et pédagogique aux étudiants sur les postes informatiques et logiciels spécialisés.</li>
+                                        <li data-i18n="experience.professional.univ.task2">Gestion et maintenance de la salle informatique : installation de logiciels, résolution de problèmes matériels et réseau.</li>
+                                        <li data-i18n="experience.professional.univ.task3">Veille au respect des règles d’utilisation et à la sécurité des équipements.</li>
+                                        <li data-i18n="experience.professional.univ.task4">Support lors des examens et des travaux pratiques informatiques.</li>
                                     </ul>
                                 </div>
                             </article>
 
                             <article class="timeline-item">
                                 <div class="timeline-item__year">Août 2023 - Mar 2025</div>
-                                <h3 class="timeline-item__title">Employé de caisse</h3>
-                                <div class="timeline-item__company">TotalEnergies</div>
+                                <h3 class="timeline-item__title" data-i18n="experience.professional.total.title">Employé de caisse</h3>
+                                <div class="timeline-item__company" data-i18n="experience.professional.total.company">TotalEnergies</div>
                                 <div class="timeline-item__description">
-                                    <p>Contrat permanent à temps partiel, Lyon  - Présentiel</p>
+                                    <p data-i18n="experience.professional.total.contract">Contrat permanent à temps partiel, Lyon  - Présentiel</p>
                                     <ul style="margin-left: var(--space-md); color: var(--text-light);">
-                                        <li>Accueil des clients et encaissements à la station Total Berliet</li>
-                                        <li>Vente de produits et services, suivi des promotions</li>
-                                        <li>Gestion des stocks et entretien des locaux</li>
-                                        <li>Application des règles de sécurité</li>
+                                        <li data-i18n="experience.professional.total.task1">Accueil des clients et encaissements à la station Total Berliet</li>
+                                        <li data-i18n="experience.professional.total.task2">Vente de produits et services, suivi des promotions</li>
+                                        <li data-i18n="experience.professional.total.task3">Gestion des stocks et entretien des locaux</li>
+                                        <li data-i18n="experience.professional.total.task4">Application des règles de sécurité</li>
                                     </ul>
                                 </div>
                             </article>
@@ -143,90 +144,89 @@
 
                     <!-- Formation académique -->
                     <div>
-                        <h2 class="mb-lg">🎓 Formation académique</h2>
+                        <h2 class="mb-lg" data-i18n="experience.academic.title">🎓 Formation académique</h2>
                         
                         <div class="timeline">
                             <article class="timeline-item">
                                 <div class="timeline-item__year">Sep 2024 - Sep 2025</div>
-                                <h3 class="timeline-item__title">Master 2 Statistique et Informatique pour la Science des Données (SISE)</h3>
-                                <div class="timeline-item__company">Université Lumière Lyon 2</div>
+                                <h3 class="timeline-item__title" data-i18n="experience.academic.master2.title">Master 2 Statistique et Informatique pour la Science des Données (SISE)</h3>
+                                <div class="timeline-item__company" data-i18n="experience.academic.master2.company">Université Lumière Lyon 2</div>
                                 <div class="timeline-item__description">
-                                    <p>Master spécialisé en mathématiques et informatique appliquées à la data science.</p>
                                     <ul style="margin-left: var(--space-md); color: var(--text-light);">
-                                        <li>Machine Learning avancé et méthodes statistiques</li>
-                                        <li>Technologies Big Data (Hadoop, Spark)</li>
-                                        <li>Bases de données relationnelles et NoSQL</li>
-                                        <li>Déploiement de projets ML/Data Science en production</li>
-                                        <li>Programmation : Python, R (programmation statistique)</li>
-                                        <li>Visualisation : Dataviz, Business Intelligence</li>
-                                        <li>Infrastructure : Big Data, Cloud</li>
-                                        <li>Text Mining & NLP (Traitement du Langage Naturel)</li>
-                                        <li>Computer Vision & Image Mining</li>
-                                        <li>Analyse des réseaux sociaux</li>
-                                        <li>Web Data Mining & scraping</li>
-                                        <li>Séries temporelles</li>
-                                        <li>Biostatistiques</li>
+                                        <li data-i18n="experience.academic.master2.course1">Machine Learning avancé et méthodes statistiques</li>
+                                        <li data-i18n="experience.academic.master2.course2">Technologies Big Data (Hadoop, Spark)</li>
+                                        <li data-i18n="experience.academic.master2.course3">Bases de données relationnelles et NoSQL</li>
+                                        <li data-i18n="experience.academic.master2.course4">Déploiement de projets ML/Data Science en production</li>
+                                        <li data-i18n="experience.academic.master2.course5">Programmation : Python, R (programmation statistique)</li>
+                                        <li data-i18n="experience.academic.master2.course6">Visualisation : Dataviz, Business Intelligence</li>
+                                        <li data-i18n="experience.academic.master2.course7">Infrastructure : Big Data, Cloud</li>
+                                        <li data-i18n="experience.academic.master2.course8">Text Mining & NLP (Traitement du Langage Naturel)</li>
+                                        <li data-i18n="experience.academic.master2.course9">Computer Vision & Image Mining</li>
+                                        <li data-i18n="experience.academic.master2.course10">Analyse des réseaux sociaux</li>
+                                        <li data-i18n="experience.academic.master2.course11">Web Data Mining & scraping</li>
+                                        <li data-i18n="experience.academic.master2.course12">Séries temporelles</li>
+                                        <li data-i18n="experience.academic.master2.course13">Biostatistiques</li>
                                     </ul>
                                     <p style="font-size: 0.875rem; color: var(--text-light); margin-top: var(--space-xs);">
-                                        <strong>Activités :</strong> Basketball universitaire
+                                        <strong data-i18n="experience.academic.master2.activities">Activités :</strong> Basketball universitaire
                                     </p>
                                 </div>
                             </article>
                             <article class="timeline-item">
                                 <div class="timeline-item__year">Sep 2023 - Aug 2024</div>
-                                <h3 class="timeline-item__title">Master 1 Informatique, parcours Science des données</h3>
-                                <div class="timeline-item__company">Université Lumière Lyon 2</div>
+                                <h3 class="timeline-item__title" data-i18n="experience.academic.master1.title">Master 1 Informatique, parcours Science des données</h3>
+                                <div class="timeline-item__company" data-i18n="experience.academic.master1.company">Université Lumière Lyon 2</div>
                                 <div class="timeline-item__description">
-                                    <p>Master 1 axé sur la data science, l'informatique et les statistiques appliquées.</p>
+                                    <p data-i18n="experience.academic.master1.description">Master 1 axé sur la data science, l'informatique et les statistiques appliquées.</p>
                                     <ul style="margin-left: var(--space-md); color: var(--text-light);">
-                                        <li>Programmation : Python, R, SAS</li>
-                                        <li>Machine Learning (supervisé, non supervisé, réseaux de neurones)</li>
-                                        <li>Ingénierie des données & ETL</li>
-                                        <li>Bases de données avancées</li>
-                                        <li>Analyse statistique</li>
-                                        <li>Développement web avancé</li>
-                                        <li>Systèmes d'information décisionnels</li>
-                                        <li>Sécurité informatique</li>
-                                        <li>Gestion de projet agile</li>
+                                        <li data-i18n="experience.academic.master1.course1">Programmation : Python, R, SAS</li>
+                                        <li data-i18n="experience.academic.master1.course2">Machine Learning (supervisé, non supervisé, réseaux de neurones)</li>
+                                        <li data-i18n="experience.academic.master1.course3">Ingénierie des données & ETL</li>
+                                        <li data-i18n="experience.academic.master1.course4">Bases de données avancées</li>
+                                        <li data-i18n="experience.academic.master1.course5">Analyse statistique</li>
+                                        <li data-i18n="experience.academic.master1.course6">Développement web avancé</li>
+                                        <li data-i18n="experience.academic.master1.course7">Systèmes d'information décisionnels</li>
+                                        <li data-i18n="experience.academic.master1.course8">Sécurité informatique</li>
+                                        <li data-i18n="experience.academic.master1.course9">Gestion de projet agile</li>
                                     </ul>
                                     <p style="font-size: 0.875rem; color: var(--text-light); margin-top: var(--space-xs);">
-                                        <strong>Activités :</strong> Basketball universitaire
+                                        <strong data-i18n="experience.academic.master1.activities">Activités :</strong> Basketball universitaire
                                     </p>
                                 </div>
                             </article>
 
                             <article class="timeline-item">
                                 <div class="timeline-item__year">Sep 2022 - Aug 2023</div>
-                                <h3 class="timeline-item__title">Licence Informatique, parcours Science des Données</h3>
-                                <div class="timeline-item__company">Université Lumière Lyon 2</div>
+                                <h3 class="timeline-item__title" data-i18n="experience.academic.license1.title">Licence Informatique, parcours Science des Données</h3>
+                                <div class="timeline-item__company" data-i18n="experience.academic.license1.company">Université Lumière Lyon 2</div>
                                 <div class="timeline-item__description">
-                                    <p>Licence axée sur l'informatique et la data science.</p>
+                                    <p data-i18n="experience.academic.license1.description">Licence axée sur l'informatique et la data science.</p>
                                     <ul style="margin-left: var(--space-md); color: var(--text-light);">
-                                        <li>Programmation orientée objet et fonctionnelle</li>
-                                        <li>Analyse exploratoire & modélisation linéaire</li>
-                                        <li>Développement Web backend</li>
-                                        <li>Gestion de bases de données & applications mobiles</li>
-                                        <li>Informatique graphique, compilation & vision</li>
-                                        <li>Architecture de l’information & droit du numérique</li>
+                                        <li data-i18n="experience.academic.license1.course1">Programmation orientée objet et fonctionnelle</li>
+                                        <li data-i18n="experience.academic.license1.course2">Analyse exploratoire & modélisation linéaire</li>
+                                        <li data-i18n="experience.academic.license1.course3">Développement Web backend</li>
+                                        <li data-i18n="experience.academic.license1.course4">Gestion de bases de données & applications mobiles</li>
+                                        <li data-i18n="experience.academic.license1.course5">Informatique graphique, compilation & vision</li>
+                                        <li data-i18n="experience.academic.license1.course6">Architecture de l’information & droit du numérique</li>
                                     </ul>
                                 </div>
                             </article>
 
                             <article class="timeline-item">
                                 <div class="timeline-item__year">Sep 2020 - Jun 2022</div>
-                                <h3 class="timeline-item__title">Licence, MIAGE - Méthodes Informatiques Appliquées à la Gestion des Entreprises</h3>
-                                <div class="timeline-item__company">Gamal Abdel Nasser University of Conakry</div>
+                                <h3 class="timeline-item__title" data-i18n="experience.academic.license2.title">Licence, MIAGE - Méthodes Informatiques Appliquées à la Gestion des Entreprises</h3>
+                                <div class="timeline-item__company" data-i18n="experience.academic.license2.company">Gamal Abdel Nasser University of Conakry</div>
                                 <div class="timeline-item__description">
-                                    <p>Licence axée sur l'informatique appliquée à la gestion, combinant compétences techniques et managériales.</p>
+                                    <p data-i18n="experience.academic.license2.description">Licence axée sur l'informatique appliquée à la gestion, combinant compétences techniques et managériales.</p>
                                     <ul style="margin-left: var(--space-md); color: var(--text-light);">
-                                        <li>Programmation : Java, Python, SQL</li>
-                                        <li>Gestion de bases de données</li>
-                                        <li>Analyse et conception de systèmes d'information</li>
-                                        <li>Mathématiques pour l'informatique</li>
-                                        <li>Gestion de projet et management</li>
-                                        <li>Statistiques et probabilités</li>
-                                        <li>Comptabilité et finance d'entreprise</li>
-                                        <li>Réseaux et sécurité informatique</li>
+                                        <li data-i18n="experience.academic.license2.course1">Programmation : Java, Python, SQL</li>
+                                        <li data-i18n="experience.academic.license2.course2">Gestion de bases de données</li>
+                                        <li data-i18n="experience.academic.license2.course3">Analyse et conception de systèmes d'information</li>
+                                        <li data-i18n="experience.academic.license2.course4">Mathématiques pour l'informatique</li>
+                                        <li data-i18n="experience.academic.license2.course5">Gestion de projet et management</li>
+                                        <li data-i18n="experience.academic.license2.course6">Statistiques et probabilités</li>
+                                        <li data-i18n="experience.academic.license2.course7">Comptabilité et finance d'entreprise</li>
+                                        <li data-i18n="experience.academic.license2.course8">Réseaux et sécurité informatique</li>
                                     </ul>
                                 </div>
                             </article>
@@ -246,10 +246,10 @@
                 <ul class="footer__links">
                     <li><a href="mailto:alex.dupont@email.com" class="footer__link" aria-label="Email">✉️</a></li>
                     <li><a href="https://linkedin.com/in/lansanacisse" class="footer__link" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a></li>
-                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener">🔗</a></li>
+                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></a></li>
                 </ul>
             </div>
-            <p class="footer__copyright">
+            <p class="footer__copyright" data-i18n="footer.copyright">
                 © 2025 Lansana CISSE. Tous droits réservés.
             </p>
         </div>
@@ -272,5 +272,6 @@
             }
         });
     </script>
+    <script src="./assets/js/i18n.js"></script>
 </body>
 </html>

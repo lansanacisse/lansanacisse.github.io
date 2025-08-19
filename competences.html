@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compétences - Lansana CISSE | Junior Data Scientist</title>
-    <meta name="description" content="Découvrez les compétences techniques et soft skills d'Lansana CISSE en data science : Python, SQL, Machine Learning, et plus.">
+    <title data-i18n="skills.page.title">Compétences - Lansana CISSE | Junior Data Scientist</title>
+    <meta name="description" content="Découvrez les compétences techniques et soft skills d'Lansana CISSE en data science : Python, SQL, Machine Learning, et plus." data-i18n="skills.page.description">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Compétences - Lansana CISSE | Junior Data Scientist">
-    <meta property="og:description" content="Compétences en data science : Python, SQL, Machine Learning, visualisation de données et soft skills.">
+    <meta property="og:title" content="Compétences - Lansana CISSE | Junior Data Scientist" data-i18n="skills.page.og.title">
+    <meta property="og:description" content="Compétences en data science : Python, SQL, Machine Learning, visualisation de données et soft skills." data-i18n="skills.page.og.description">
     <meta property="og:type" content="website">
     
     <!-- Favicon -->
@@ -19,24 +19,25 @@
 </head>
 <body>
     <!-- Skip link -->
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link" data-i18n="a11y.skip">Aller au contenu principal</a>
 
     <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav" role="navigation" aria-label="Navigation principale">
-                <a href="index.html" class="nav__logo">Lansana CISSE</a>
+                <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
                 
                 <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
                 
                 <ul class="nav__menu" id="nav-menu">
-                    <li><a href="index.html" class="nav__link">Accueil</a></li>
-                    <li><a href="projets.html" class="nav__link">Projets</a></li>
-                    <li><a href="competences.html" class="nav__link nav__link--active">Compétences</a></li>
-                    <li><a href="experiences.html" class="nav__link">Expériences</a></li>
-                    <li><a href="blog.html" class="nav__link">Blog</a></li>
-                    <li><a href="contact.html" class="nav__link">Contact</a></li>
-                    <li><a href="./assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener">Télécharger CV</a></li>
+                    <li><a href="index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="projets.html" class="nav__link" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="competences.html" class="nav__link nav__link--active" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="experiences.html" class="nav__link" data-i18n="nav.experiences">Expériences</a></li>
+                    <li><a href="blog.html" class="nav__link" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="./assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener" data-i18n="nav.cv">Télécharger CV</a></li>
+                    <li class="nav__lang-switch"><div class="lang-switch" id="lang-switch" aria-label="Language selector"><button type="button" data-lang="fr" aria-pressed="true">FR</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></li>
                 </ul>
             </nav>
         </div>
@@ -57,8 +58,8 @@
         <section class="section">
             <div class="container">
                 <div class="section__header">
-                    <h1 class="section__title">Mes compétences</h1>
-                    <p class="section__subtitle">
+                    <h1 class="section__title" data-i18n="skills.title">Mes compétences</h1>
+                    <p class="section__subtitle" data-i18n="skills.subtitle">
                         Un aperçu de mes compétences techniques et soft skills en data science
                     </p>
                 </div>
@@ -67,7 +68,7 @@
                     <!-- Langages de programmation -->
                     <div class="card">
                         <div class="card__header">
-                            <h2 class="card__title">🐍 Langages de programmation</h2>
+                            <h2 class="card__title" data-i18n="skills.programmingLanguages">🐍 Langages de programmation</h2>
                         </div>
                         <div class="card__content">
                             <div class="skill-item">
@@ -115,7 +116,7 @@
                     <!-- Librairies et frameworks -->
                     <div class="card">
                         <div class="card__header">
-                            <h2 class="card__title">📚 Librairies & Frameworks</h2>
+                            <h2 class="card__title" data-i18n="skills.librariesFrameworks">📚 Librairies & Frameworks</h2>
                         </div>
                         <div class="card__content">
                             <div class="skill-item">
@@ -163,7 +164,7 @@
                     <!-- Visualisation de données -->
                     <div class="card">
                         <div class="card__header">
-                            <h2 class="card__title">📊 Visualisation de données</h2>
+                            <h2 class="card__title" data-i18n="skills.dataVisualisation">📊 Visualisation de données</h2>
                         </div>
                         <div class="card__content">
                             <div class="skill-item">
@@ -211,7 +212,7 @@
                     <!-- Outils et technologies -->
                     <div class="card">
                         <div class="card__header">
-                            <h2 class="card__title">🛠️ Outils & Technologies</h2>
+                            <h2 class="card__title" data-i18n="skills.toolsTechnologies">🛠️ Outils & Technologies</h2>
                         </div>
                         <div class="card__content">
                             <div class="skill-item">
@@ -261,8 +262,8 @@
                 <section class="section section--light">
                     <div class="container">
                         <div class="section__header">
-                            <h2 class="section__title">💡 Soft Skills</h2>
-                            <p class="section__subtitle">
+                            <h2 class="section__title" data-i18n="skills.softSkills">💡 Soft Skills</h2>
+                            <p class="section__subtitle" data-i18n="skills.softSkills.subtitle">
                                 Des qualités humaines essentielles pour travailler efficacement en équipe
                             </p>
                         </div>
@@ -270,73 +271,73 @@
                         <div class="grid grid-4">
                             <div class="card">
                                 <div class="card__header">
-                                    <h3 class="card__title">🧠 Esprit analytique</h3>
+                                    <h3 class="card__title" data-i18n="skills.softSkills.analyticalThinking">🧠 Esprit analytique</h3>
                                 </div>
                                 <div class="card__content">
-                                    <p>Capacité à décomposer des problèmes complexes en sous-problèmes plus simples et à identifier les patterns dans les données.</p>
+                                    <p data-i18n="skills.softSkills.analyticalThinking.description">Capacité à décomposer des problèmes complexes en sous-problèmes plus simples et à identifier les patterns dans les données.</p>
                                 </div>
                             </div>
                             
                             <div class="card">
                                 <div class="card__header">
-                                    <h3 class="card__title">🗣️ Communication</h3>
+                                    <h3 class="card__title" data-i18n="skills.softSkills.communication">🗣️ Communication</h3>
                                 </div>
                                 <div class="card__content">
-                                    <p>Aptitude à expliquer des concepts techniques complexes à des interlocuteurs non-techniques de manière claire et accessible.</p>
+                                    <p data-i18n="skills.softSkills.communication.description">Aptitude à expliquer des concepts techniques complexes à des interlocuteurs non-techniques de manière claire et accessible.</p>
                                 </div>
                             </div>
                             
                             <div class="card">
                                 <div class="card__header">
-                                    <h3 class="card__title">🔍 Curiosité</h3>
+                                    <h3 class="card__title" data-i18n="skills.softSkills.curiosity">🔍 Curiosité</h3>
                                 </div>
                                 <div class="card__content">
-                                    <p>Passion pour l'apprentissage continu et l'exploration de nouvelles technologies et méthodologies en data science.</p>
+                                    <p data-i18n="skills.softSkills.curiosity.description">Passion pour l'apprentissage continu et l'exploration de nouvelles technologies et méthodologies en data science.</p>
                                 </div>
                             </div>
                             
                             <div class="card">
                                 <div class="card__header">
-                                    <h3 class="card__title">🎯 Rigueur</h3>
+                                    <h3 class="card__title" data-i18n="skills.softSkills.rigor">🎯 Rigueur</h3>
                                 </div>
                                 <div class="card__content">
-                                    <p>Attention particulière à la qualité des données, à la validation des modèles et à la reproductibilité des analyses.</p>
+                                    <p data-i18n="skills.softSkills.rigor.description">Attention particulière à la qualité des données, à la validation des modèles et à la reproductibilité des analyses.</p>
                                 </div>
                             </div>
                             
                             <div class="card">
                                 <div class="card__header">
-                                    <h3 class="card__title">🤝 Travail en équipe</h3>
+                                    <h3 class="card__title" data-i18n="skills.softSkills.teamwork">🤝 Travail en équipe</h3>
                                 </div>
                                 <div class="card__content">
-                                    <p>Collaboration efficace avec des équipes pluridisciplinaires : développeurs, product managers, business analysts.</p>
+                                    <p data-i18n="skills.softSkills.teamwork.description">Collaboration efficace avec des équipes pluridisciplinaires : développeurs, product managers, business analysts.</p>
                                 </div>
                             </div>
                             
                             <div class="card">
                                 <div class="card__header">
-                                    <h3 class="card__title">⚡ Adaptabilité</h3>
+                                    <h3 class="card__title" data-i18n="skills.softSkills.adaptability">⚡ Adaptabilité</h3>
                                 </div>
                                 <div class="card__content">
-                                    <p>Flexibilité face aux changements de priorités et capacité à s'adapter rapidement à de nouveaux environnements.</p>
+                                    <p data-i18n="skills.softSkills.adaptability.description">Flexibilité face aux changements de priorités et capacité à s'adapter rapidement à de nouveaux environnements.</p>
                                 </div>
                             </div>
                             
                             <div class="card">
                                 <div class="card__header">
-                                    <h3 class="card__title">📈 Orienté résultats</h3>
+                                    <h3 class="card__title" data-i18n="skills.softSkills.resultsOrientation">📈 Orienté résultats</h3>
                                 </div>
                                 <div class="card__content">
-                                    <p>Focus sur l'impact métier des analyses et la création de valeur concrète à partir des données.</p>
+                                    <p data-i18n="skills.softSkills.resultsOrientation.description">Focus sur l'impact métier des analyses et la création de valeur concrète à partir des données.</p>
                                 </div>
                             </div>
                             
                             <div class="card">
                                 <div class="card__header">
-                                    <h3 class="card__title">🔧 Résolution de problèmes</h3>
+                                    <h3 class="card__title" data-i18n="skills.softSkills.problemSolving">🔧 Résolution de problèmes</h3>
                                 </div>
                                 <div class="card__content">
-                                    <p>Approche méthodique pour identifier les causes racines et proposer des solutions innovantes et efficaces.</p>
+                                    <p data-i18n="skills.softSkills.problemSolving.description">Approche méthodique pour identifier les causes racines et proposer des solutions innovantes et efficaces.</p>
                                 </div>
                             </div>
                         </div>
@@ -353,10 +354,10 @@
                 <ul class="footer__links">
                     <li><a href="mailto:alex.dupont@email.com" class="footer__link" aria-label="Email">✉️</a></li>
                     <li><a href="https://linkedin.com/in/lansanacisse" class="footer__link" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a></li>
-                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener">🔗</a></li>
+                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></a></li>
                 </ul>
             </div>
-            <p class="footer__copyright">
+            <p class="footer__copyright" data-i18n="footer.copyright">
                 © 2025 Lansana CISSE. Tous droits réservés.
             </p>
         </div>
@@ -364,42 +365,13 @@
 
     <!-- JavaScript -->
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('nav-menu');
-            menu.classList.toggle('nav__menu--open');
-        }
+        function toggleMenu(){const menu=document.getElementById('nav-menu');menu.classList.toggle('nav__menu--open');}
+        document.addEventListener('click',function(e){const menu=document.getElementById('nav-menu');const t=document.querySelector('.nav__toggle');if(!menu.contains(e.target)&&!t.contains(e.target)) menu.classList.remove('nav__menu--open');});
         
         // Animation des barres de progression au scroll
-        function animateProgressBars() {
-            const progressBars = document.querySelectorAll('.progress__bar');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const bar = entry.target;
-                        const width = bar.style.width;
-                        bar.style.width = '0%';
-                        setTimeout(() => {
-                            bar.style.width = width;
-                        }, 100);
-                    }
-                });
-            }, { threshold: 0.5 });
-            
-            progressBars.forEach(bar => observer.observe(bar));
-        }
-        
-        // Initialiser les animations
+        function animateProgressBars(){const progressBars=document.querySelectorAll('.progress__bar');const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){const bar=entry.target;const width=bar.style.width;bar.style.width='0%';setTimeout(()=>{bar.style.width=width;},100);}});},{threshold:0.5});progressBars.forEach(bar=>observer.observe(bar));}
         document.addEventListener('DOMContentLoaded', animateProgressBars);
-        
-        // Fermer le menu mobile si on clique ailleurs
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('nav-menu');
-            const toggle = document.querySelector('.nav__toggle');
-            
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.classList.remove('nav__menu--open');
-            }
-        });
     </script>
+    <script src="./assets/js/i18n.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ Allow: /
 Sitemap: https://lansanacisse.github.io/sitemap.xml
 
 # Disallow les fichiers sensibles si présents
-Disallow: /assets/cv.pdf
+Disallow: /assets/lansanacisse.pdf
 
 # Permettre tous les moteurs de recherche populaires
 User-agent: Googlebot

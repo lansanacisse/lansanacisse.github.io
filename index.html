@@ -17,8 +17,37 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        /* Sélecteur langue */
+        .lang-switch { display:flex; gap:.4rem; align-items:center; font-size:.75rem; }
+        .lang-switch button { background:none; border:1px solid var(--border-light,#444); padding:.25rem .55rem; cursor:pointer; border-radius:4px; color:var(--text-dark); line-height:1; }
+        .lang-switch button[aria-pressed="true"] { background:var(--primary-color); color:#fff; border-color:var(--primary-color); }
+        /* Navigation alignement */
+        .nav { display:flex; align-items:center; gap:var(--space-lg); }
+        .nav__menu { display:flex; align-items:center; gap:var(--space-lg); margin-left:auto; }
+        .nav__menu > li { list-style:none; }
+        .nav__lang-switch { padding:0; }
+        /* Empêcher le wrap dû à la différence de longueur EN/FR : réduire espace et permettre compression */
+        @media (min-width:769px){
+            .nav__menu { flex-wrap:nowrap; }
+            .nav__menu a, .lang-switch button { white-space:nowrap; }
+        }
+        /* Mobile */
+        .nav__toggle { margin-left:auto; }
+        @media (max-width:768px){
+            .nav { flex-wrap:wrap; }
+            .nav__toggle { order:2; }
+            .nav__menu { flex-direction:column; align-items:stretch; width:100%; gap:var(--space-sm); margin-left:0; }
+            .nav__menu--open { display:flex; }
+            .nav__lang-switch { order:0; }
+            .lang-switch { justify-content:center; font-size:.8rem; }
+        }
+    </style>
 </head>
 <body>
+    <!-- Canvas arrière-plan animé -->
+    <canvas id="bg-network" aria-hidden="true"></canvas>
+
     <!-- Skip link pour l'accessibilité -->
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
@@ -26,18 +55,22 @@
     <header class="header">
         <div class="container">
             <nav class="nav" role="navigation" aria-label="Navigation principale">
-                <a href="index.html" class="nav__logo">Lansana CISSE</a>
-                
+                <a href="index.html" class="nav__logo" data-i18n="hero.name">Lansana CISSE</a>
                 <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
-                
                 <ul class="nav__menu" id="nav-menu">
-                    <li><a href="index.html" class="nav__link nav__link--active">Accueil</a></li>
-                    <li><a href="projets.html" class="nav__link">Projets</a></li>
-                    <li><a href="competences.html" class="nav__link">Compétences</a></li>
-                    <li><a href="experiences.html" class="nav__link">Expériences</a></li>
-                    <li><a href="blog.html" class="nav__link">Blog</a></li>
-                    <li><a href="contact.html" class="nav__link">Contact</a></li>
-                    <li><a href="./assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener">Télécharger CV</a></li>
+                    <li><a href="index.html" class="nav__link nav__link--active" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="projets.html" class="nav__link" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="competences.html" class="nav__link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="experiences.html" class="nav__link" data-i18n="nav.experiences">Expériences</a></li>
+                    <li><a href="blog.html" class="nav__link" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="./assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener" data-i18n="nav.cv">Télécharger CV</a></li>
+                    <li class="nav__lang-switch">
+                        <div class="lang-switch" id="lang-switch" aria-label="Language selector">
+                            <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+                            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -49,12 +82,12 @@
         <section class="hero">
             <div class="container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Lansana CISSE</h1>
-                    <p class="hero__subtitle">
+                    <h1 class="hero__title" data-i18n="hero.name">Lansana CISSE</h1>
+                    <p class="hero__subtitle" data-i18n="hero.subtitle">
                         Data Scientist passionné par l'intelligence artificielle et l'analyse de données. 
                         Je transforme les données en insights exploitables pour résoudre des problèmes métiers complexes.
                     </p>
-                    <a href="projets.html" class="hero__cta">
+                    <a href="projets.html" class="hero__cta" data-i18n="hero.cta">
                         Découvrir mes projets
                         <span aria-hidden="true">→</span>
                     </a>
@@ -66,8 +99,8 @@
         <section class="section">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Mes points forts</h2>
-                    <p class="section__subtitle">
+                    <h2 class="section__title" data-i18n="strengths.title">Mes points forts</h2>
+                    <p class="section__subtitle" data-i18n="strengths.subtitle">
                         Des compétences techniques solides au service de projets data innovants
                     </p>
                 </div>
@@ -75,54 +108,54 @@
                 <div class="grid grid-4">
                     <div class="card">
                         <div class="card__header">
-                            <h3 class="card__title">🐍 Python</h3>
+                            <h3 class="card__title" data-i18n="strength.python.title">🐍 Python</h3>
                         </div>
                         <div class="card__content">
-                            <p>Maîtrise des librairies essentielles : Pandas, NumPy, Scikit-learn pour l'analyse et le machine learning.</p>
+                            <p data-i18n="strength.python.text">Maîtrise des librairies essentielles : Pandas, NumPy, Scikit-learn pour l'analyse et le machine learning.</p>
                         </div>
                     </div>
                     
                     <div class="card">
                         <div class="card__header">
-                            <h3 class="card__title">🗃️ SQL</h3>
+                            <h3 class="card__title" data-i18n="strength.sql.title">🗃️ SQL</h3>
                         </div>
                         <div class="card__content">
-                            <p>Extraction et manipulation de données complexes, optimisation de requêtes sur grandes bases de données.</p>
+                            <p data-i18n="strength.sql.text">Extraction et manipulation de données complexes, optimisation de requêtes sur grandes bases de données.</p>
                         </div>
                     </div>
                     
                     <div class="card">
                         <div class="card__header">
-                            <h3 class="card__title">🤖 Machine Learning</h3>
+                            <h3 class="card__title" data-i18n="strength.ml.title">🤖 Machine Learning</h3>
                         </div>
                         <div class="card__content">
-                            <p>Développement de modèles prédictifs, classification, clustering et régression avec validation croisée.</p>
+                            <p data-i18n="strength.ml.text">Développement de modèles prédictifs, classification, clustering et régression avec validation croisée.</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card__header">
-                            <h3 class="card__title">🦾 LLM</h3>
+                            <h3 class="card__title" data-i18n="strength.llm.title">🦾 LLM</h3>
                         </div>
                         <div class="card__content">
-                            <p>Développement et fine-tuning de modèles de langage (LLM) pour des applications avancées en NLP et automatisation.</p>
+                            <p data-i18n="strength.llm.text">Développement et fine-tuning de modèles de langage (LLM) pour des applications avancées en NLP et automatisation.</p>
                         </div>
                     </div>
             
                     <div class="card">
                         <div class="card__header">
-                            <h3 class="card__title">📝 NLP</h3>
+                            <h3 class="card__title" data-i18n="strength.nlp.title">📝 NLP</h3>
                         </div>
                         <div class="card__content">
-                            <p>Traitement du langage naturel, analyse de sentiments et modèles de langage avancés avec Transformers.</p>
+                            <p data-i18n="strength.nlp.text">Traitement du langage naturel, analyse de sentiments et modèles de langage avancés avec Transformers.</p>
                         </div>
                     
                     </div>
                     <div class="card">
                         <div class="card__header">
-                            <h3 class="card__title">📈 Business Intelligence</h3>
+                            <h3 class="card__title" data-i18n="strength.bi.title">📈 Business Intelligence</h3>
                         </div>
                         <div class="card__content">
-                            <p>Création de tableaux de bord dynamiques et interactifs pour le suivi des KPIs et la prise de décision.</p>
+                            <p data-i18n="strength.bi.text">Création de tableaux de bord dynamiques et interactifs pour le suivi des KPIs et la prise de décision.</p>
                         </div>
                     </div>
                 </div>
@@ -133,8 +166,8 @@
         <section class="section section--light">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Projets en cours</h2>
-                    <p class="section__subtitle">
+                    <h2 class="section__title" data-i18n="projects.current.title">Projets en cours</h2>
+                    <p class="section__subtitle" data-i18n="projects.current.subtitle">
                         Découvrez mes réalisations les plus récentes en cours de développement
                     </p>
                 </div>
@@ -142,11 +175,11 @@
                 <div class="grid grid-3">
                     <article class="card">
                         <div class="card__header">
-                            <h3 class="card__title">Nkaran</h3>
-                            <p class="card__subtitle">Assistant vocal et textuel • Diakhanké</p>
+                            <h3 class="card__title" data-i18n="projects.nkaran.title">Nkaran</h3>
+                            <p class="card__subtitle" data-i18n="projects.nkaran.subtitle">Assistant vocal et textuel • Diakhanké</p>
                         </div>
                         <div class="card__content">
-                            <p>Assistant interactif pour apprendre le Diakhanké, une langue africaine, via des échanges vocaux et textuels immersifs.</p>
+                            <p data-i18n="projects.nkaran.text">Assistant interactif pour apprendre le Diakhanké, une langue africaine, via des échanges vocaux et textuels immersifs.</p>
                             <div class="tags">
                                 <span class="tag">Python</span>
                                 <span class="tag">NLP</span>
@@ -154,18 +187,18 @@
                             </div>
                         </div>
                         <div class="card__actions">
-                            <a href="https://github.com/lansanacisse/Nkaran" class="btn btn--primary btn--small" target="_blank" rel="noopener">Voir détails</a>
-                            <a href="https://github.com/lansanacisse/Nkaran" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
+                            <a href="https://github.com/lansanacisse/Nkaran" class="btn btn--primary btn--small" target="_blank" rel="noopener" data-i18n="projects.details">Voir détails</a>
+                            <a href="https://github.com/lansanacisse/Nkaran" class="btn btn--secondary btn--small" target="_blank" rel="noopener" data-i18n="projects.github">Code GitHub</a>
                         </div>
                     </article>
                     
                     <article class="card">
                         <div class="card__header">
-                            <h3 class="card__title">Nnakouri</h3>
-                            <p class="card__subtitle">Assistant culinaire • RAG & Wikipédia</p>
+                            <h3 class="card__title" data-i18n="projects.nnakouri.title">Nnakouri</h3>
+                            <p class="card__subtitle" data-i18n="projects.nnakouri.subtitle">Assistant culinaire • RAG & Wikipédia</p>
                         </div>
                         <div class="card__content">
-                            <p>Assistant basé sur la RAG proposant des recettes africaines et des conseils personnalisés grâce à l'intégration de Wikipédia.</p>
+                            <p data-i18n="projects.nnakouri.text">Assistant basé sur la RAG proposant des recettes africaines et des conseils personnalisés grâce à l'intégration de Wikipédia.</p>
                             <div class="tags">
                                 <span class="tag">Python</span>
                                 <span class="tag">RAG</span>
@@ -173,18 +206,18 @@
                             </div>
                         </div>
                         <div class="card__actions">
-                            <a href="https://github.com/lansanacisse/Nnakouri" class="btn btn--primary btn--small" target="_blank" rel="noopener">Voir détails</a>
-                            <a href="https://github.com/lansanacisse/Nnakouri" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
+                            <a href="https://github.com/lansanacisse/Nnakouri" class="btn btn--primary btn--small" target="_blank" rel="noopener" data-i18n="projects.details">Voir détails</a>
+                            <a href="https://github.com/lansanacisse/Nnakouri" class="btn btn--secondary btn--small" target="_blank" rel="noopener" data-i18n="projects.github">Code GitHub</a>
                         </div>
                     </article>
                     
                     <article class="card">
                         <div class="card__header">
-                            <h3 class="card__title">SISE Classmate</h3>
-                            <p class="card__subtitle">Assistant éducatif • Mistral & Gemini</p>
+                            <h3 class="card__title" data-i18n="projects.sise.title">SISE Classmate</h3>
+                            <p class="card__subtitle" data-i18n="projects.sise.subtitle">Assistant éducatif • Mistral & Gemini</p>
                         </div>
                         <div class="card__content">
-                            <p>Assistant conversationnel spécialisé dans l'éducation, utilisant les modèles d'IA Mistral et Gemini pour accompagner les élèves.</p>
+                            <p data-i18n="projects.sise.text">Assistant conversationnel spécialisé dans l'éducation, utilisant les modèles d'IA Mistral et Gemini pour accompagner les élèves.</p>
                             <div class="tags">
                                 <span class="tag">LLM</span>
                                 <span class="tag">Mistral</span>
@@ -192,14 +225,14 @@
                             </div>
                         </div>
                         <div class="card__actions">
-                            <a href="https://github.com/hugocollin/llm" class="btn btn--primary btn--small" target="_blank" rel="noopener">Voir détails</a>
-                            <a href="https://github.com/hugocollin/llm" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
+                            <a href="https://github.com/hugocollin/llm" class="btn btn--primary btn--small" target="_blank" rel="noopener" data-i18n="projects.details">Voir détails</a>
+                            <a href="https://github.com/hugocollin/llm" class="btn btn--secondary btn--small" target="_blank" rel="noopener" data-i18n="projects.github">Code GitHub</a>
                         </div>
                     </article>
                 </div>
                 
                 <div class="text-center mt-xl">
-                    <a href="projets.html" class="btn btn--primary">Voir tous les projets</a>
+                    <a href="projets.html" class="btn btn--primary" data-i18n="projects.all">Voir tous les projets</a>
                 </div>
             </div>
         </section>
@@ -209,15 +242,15 @@
             <div class="container">
                 <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
                     <div class="card__content">
-                        <h2 class="card__title" style="margin-bottom: var(--space-md);">Ce que je recherche</h2>
-                        <p style="font-size: 1.125rem; margin-bottom: var(--space-lg);">
+                        <h2 class="card__title" style="margin-bottom: var(--space-md);" data-i18n="seeking.title">Ce que je recherche</h2>
+                        <p style="font-size: 1.125rem; margin-bottom: var(--space-lg);" data-i18n="seeking.text">
                             "Je suis à la recherche d'un poste de Data Scientist ou Consultant Data dans une équipe dynamique où je pourrai 
                             appliquer mes compétences en machine learning sur des projets concrets ayant un impact métier. 
                             Mon objectif : apprendre continuellement et contribuer à des solutions data innovantes."
                         </p>
                         <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;">
-                            <a href="projets.html" class="btn btn--secondary">Mes réalisations</a>
-                            <a href="contact.html" class="btn btn--primary">Me contacter</a>
+                            <a href="projets.html" class="btn btn--secondary" data-i18n="seeking.actions.projects">Mes réalisations</a>
+                            <a href="contact.html" class="btn btn--primary" data-i18n="seeking.actions.contact">Me contacter</a>
                         </div>
                     </div>
                 </div>
@@ -232,31 +265,18 @@
                 <ul class="footer__links">
                     <li><a href="mailto:lansana6c@gmail.com" class="footer__link" aria-label="Email">✉️</a></li>
                     <li><a href="https://linkedin.com/in/lansana-cisse" class="footer__link" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a></li>
-                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener">🔗</a></li>
+                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg></a></li>
                 </ul>
             </div>
-            <p class="footer__copyright">
-                © 2025 Lansana CISSE. Tous droits réservés.
-            </p>
+            <p class="footer__copyright" data-i18n="footer.rights">© 2025 Lansana CISSE. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <!-- JavaScript pour le menu mobile -->
+    <!-- JavaScript pour le menu mobile + i18n -->
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('nav-menu');
-            menu.classList.toggle('nav__menu--open');
-        }
-        
-        // Fermer le menu si on clique ailleurs
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('nav-menu');
-            const toggle = document.querySelector('.nav__toggle');
-            
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.classList.remove('nav__menu--open');
-            }
-        });
+        function toggleMenu(){const menu=document.getElementById('nav-menu');menu.classList.toggle('nav__menu--open');}
+        document.addEventListener('click',function(event){const menu=document.getElementById('nav-menu');const toggle=document.querySelector('.nav__toggle');if(!menu.contains(event.target)&&!toggle.contains(event.target)){menu.classList.remove('nav__menu--open');}});
     </script>
+    <script src="./assets/js/i18n.js"></script>
 </body>
 </html>
