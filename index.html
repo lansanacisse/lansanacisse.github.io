@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lansana CISSE - Data Scientist | Portfolio</title>
+    <meta name="description" content="Portfolio d'Lansana CISSE, Junior Data Scientist spécialisé en Machine Learning, Python et analyse de données. Découvrez mes projets et compétences.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lansana CISSE - Data Scientist">
+    <meta property="og:description" content="Portfolio d'Lansana CISSE, Data Scientist spécialisé en Machine Learning, NLP et LLM">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lansanacisse.github.io">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Skip link pour l'accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Navigation principale">
+                <a href="index.html" class="nav__logo">Lansana CISSE</a>
+                
+                <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+                
+                <ul class="nav__menu" id="nav-menu">
+                    <li><a href="index.html" class="nav__link nav__link--active">Accueil</a></li>
+                    <li><a href="projets.html" class="nav__link">Projets</a></li>
+                    <li><a href="competences.html" class="nav__link">Compétences</a></li>
+                    <li><a href="experiences.html" class="nav__link">Expériences</a></li>
+                    <li><a href="blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li><a href="./assets/cv.pdf" class="nav__cta" target="_blank" rel="noopener">Télécharger CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main id="main-content">
+        <!-- Section Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Lansana CISSE</h1>
+                    <p class="hero__subtitle">
+                        Data Scientist passionné par l'intelligence artificielle et l'analyse de données. 
+                        Je transforme les données en insights exploitables pour résoudre des problèmes métiers complexes.
+                    </p>
+                    <a href="projets.html" class="hero__cta">
+                        Découvrir mes projets
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Points forts -->
+        <section class="section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Mes points forts</h2>
+                    <p class="section__subtitle">
+                        Des compétences techniques solides au service de projets data innovants
+                    </p>
+                </div>
+                
+                <div class="grid grid-4">
+                    <div class="card">
+                        <div class="card__header">
+                            <h3 class="card__title">🐍 Python</h3>
+                        </div>
+                        <div class="card__content">
+                            <p>Maîtrise des librairies essentielles : Pandas, NumPy, Scikit-learn pour l'analyse et le machine learning.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card__header">
+                            <h3 class="card__title">🗃️ SQL</h3>
+                        </div>
+                        <div class="card__content">
+                            <p>Extraction et manipulation de données complexes, optimisation de requêtes sur grandes bases de données.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card__header">
+                            <h3 class="card__title">🤖 Machine Learning</h3>
+                        </div>
+                        <div class="card__content">
+                            <p>Développement de modèles prédictifs, classification, clustering et régression avec validation croisée.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <h3 class="card__title">🦾 LLM</h3>
+                        </div>
+                        <div class="card__content">
+                            <p>Développement et fine-tuning de modèles de langage (LLM) pour des applications avancées en NLP et automatisation.</p>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="card__header">
+                            <h3 class="card__title">📝 NLP</h3>
+                        </div>
+                        <div class="card__content">
+                            <p>Traitement du langage naturel, analyse de sentiments et modèles de langage avancés avec Transformers.</p>
+                        </div>
+                    
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <h3 class="card__title">📈 Business Intelligence</h3>
+                        </div>
+                        <div class="card__content">
+                            <p>Création de tableaux de bord dynamiques et interactifs pour le suivi des KPIs et la prise de décision.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Projets en vedette -->
+        <section class="section section--light">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Projets en cours</h2>
+                    <p class="section__subtitle">
+                        Découvrez mes réalisations les plus récentes en cours de développement
+                    </p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <article class="card">
+                        <div class="card__header">
+                            <h3 class="card__title">Nkaran</h3>
+                            <p class="card__subtitle">Assistant vocal et textuel • Diakhanké</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Assistant interactif pour apprendre le Diakhanké, une langue africaine, via des échanges vocaux et textuels immersifs.</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">Speech-to-Text</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="https://github.com/lansanacisse/Nkaran" class="btn btn--primary btn--small" target="_blank" rel="noopener">Voir détails</a>
+                            <a href="https://github.com/lansanacisse/Nkaran" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card__header">
+                            <h3 class="card__title">Nnakouri</h3>
+                            <p class="card__subtitle">Assistant culinaire • RAG & Wikipédia</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Assistant basé sur la RAG proposant des recettes africaines et des conseils personnalisés grâce à l'intégration de Wikipédia.</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">NLP</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="https://github.com/lansanacisse/Nnakouri" class="btn btn--primary btn--small" target="_blank" rel="noopener">Voir détails</a>
+                            <a href="https://github.com/lansanacisse/Nnakouri" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card__header">
+                            <h3 class="card__title">SISE Classmate</h3>
+                            <p class="card__subtitle">Assistant éducatif • Mistral & Gemini</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Assistant conversationnel spécialisé dans l'éducation, utilisant les modèles d'IA Mistral et Gemini pour accompagner les élèves.</p>
+                            <div class="tags">
+                                <span class="tag">LLM</span>
+                                <span class="tag">Mistral</span>
+                                <span class="tag">Gemini</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="https://github.com/hugocollin/llm" class="btn btn--primary btn--small" target="_blank" rel="noopener">Voir détails</a>
+                            <a href="https://github.com/hugocollin/llm" class="btn btn--secondary btn--small" target="_blank" rel="noopener">Code GitHub</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center mt-xl">
+                    <a href="projets.html" class="btn btn--primary">Voir tous les projets</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Témoignage / Ce que je recherche -->
+        <section class="section">
+            <div class="container">
+                <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <div class="card__content">
+                        <h2 class="card__title" style="margin-bottom: var(--space-md);">Ce que je recherche</h2>
+                        <p style="font-size: 1.125rem; margin-bottom: var(--space-lg);">
+                            "Je suis à la recherche d'un poste de Data Scientist ou Consultant Data dans une équipe dynamique où je pourrai 
+                            appliquer mes compétences en machine learning sur des projets concrets ayant un impact métier. 
+                            Mon objectif : apprendre continuellement et contribuer à des solutions data innovantes."
+                        </p>
+                        <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;">
+                            <a href="projets.html" class="btn btn--secondary">Mes réalisations</a>
+                            <a href="contact.html" class="btn btn--primary">Me contacter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <ul class="footer__links">
+                    <li><a href="mailto:lansana6c@gmail.com" class="footer__link" aria-label="Email">✉️</a></li>
+                    <li><a href="https://linkedin.com/in/lansana-cisse" class="footer__link" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a></li>
+                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener">🔗</a></li>
+                </ul>
+            </div>
+            <p class="footer__copyright">
+                © 2025 Lansana CISSE. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript pour le menu mobile -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('nav__menu--open');
+        }
+        
+        // Fermer le menu si on clique ailleurs
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('nav-menu');
+            const toggle = document.querySelector('.nav__toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('nav__menu--open');
+            }
+        });
+    </script>
+</body>
+</html>

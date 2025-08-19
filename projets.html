@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Lansana CISSE | Junior Data Scientist</title>
+    <meta name="description" content="Découvrez les projets data science d'Lansana CISSE : machine learning, NLP, computer vision, analyse de données et visualisation.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Projets - Lansana CISSE | Junior Data Scientist">
+    <meta property="og:description" content="Découvrez les projets data science d'Lansana CISSE : machine learning, NLP, computer vision, analyse de données et visualisation.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Navigation principale">
+                <a href="index.html" class="nav__logo">Lansana CISSE</a>
+                
+                <button class="nav__toggle" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+                
+                <ul class="nav__menu" id="nav-menu">
+                    <li><a href="index.html" class="nav__link">Accueil</a></li>
+                    <li><a href="projets.html" class="nav__link nav__link--active">Projets</a></li>
+                    <li><a href="competences.html" class="nav__link">Compétences</a></li>
+                    <li><a href="experiences.html" class="nav__link">Expériences</a></li>
+                    <li><a href="blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li><a href="./assets/Lansana_CISSE.pdf" class="nav__cta" target="_blank" rel="noopener">Télécharger CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="index.html">Accueil</a></li>
+                <li class="breadcrumb__item">Projets</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="section__header">
+                    <h1 class="section__title">Mes projets</h1>
+                    <p class="section__subtitle">
+                        Découvrez mes réalisations en data science, machine learning et analyse de données
+                    </p>
+                </div>
+
+                <!-- Filtres -->
+                <div class="filters">
+                    <button class="filter-btn active" onclick="filterProjects('all')">Tous</button>
+                    <button class="filter-btn" onclick="filterProjects('nlp')">NLP</button>
+                    <button class="filter-btn" onclick="filterProjects('cv')">Computer Vision</button>
+                    <button class="filter-btn" onclick="filterProjects('tabulaire')">Données tabulaires</button>
+                    <button class="filter-btn" onclick="filterProjects('viz')">Visualisation</button>
+                </div>
+
+                <!-- Grille de projets -->
+                <div class="grid grid-3" id="projects-grid">
+                    <!-- Projet 1 -->
+                    <article class="card project-card" data-category="tabulaire">
+                        <div class="card__header">
+                            <h3 class="card__title">Prédiction de défaut de paiement</h3>
+                            <p class="card__subtitle">Classification • Machine Learning</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Développement d'un modèle de classification pour prédire les risques de défaut de paiement bancaire. Feature engineering poussé, gestion du déséquilibre des classes et optimisation d'hyperparamètres pour atteindre 89% de précision.</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">XGBoost</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">SMOTE</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="#" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="#" class="btn btn--secondary btn--small">Code GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 2 -->
+                    <article class="card project-card" data-category="nlp">
+                        <div class="card__header">
+                            <h3 class="card__title">Analyse de sentiment Twitter</h3>
+                            <p class="card__subtitle">NLP • Deep Learning</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Classification automatique de sentiments sur 100k tweets en français. Preprocessing NLP avancé, word embeddings et modèle LSTM pour obtenir 92% d'accuracy sur le dataset de test.</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NLTK</span>
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">Word2Vec</span>
+                                <span class="tag">LSTM</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="#" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="#" class="btn btn--secondary btn--small">Code GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 3 -->
+                    <article class="card project-card" data-category="viz">
+                        <div class="card__header">
+                            <h3 class="card__title">Dashboard ventes interactif</h3>
+                            <p class="card__subtitle">Business Intelligence • Visualisation</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Tableau de bord temps réel pour analyser les performances commerciales d'une PME. KPIs dynamiques, filtres interactifs et prédictions de tendances avec mise à jour automatique.</p>
+                            <div class="tags">
+                                <span class="tag">Plotly</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Prophet</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="#" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="#" class="btn btn--secondary btn--small">Code GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 4 -->
+                    <article class="card project-card" data-category="cv">
+                        <div class="card__header">
+                            <h3 class="card__title">Classification d'images médicales</h3>
+                            <p class="card__subtitle">Computer Vision • CNN</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Modèle CNN pour classifier des radiographies pulmonaires et détecter des pneumonies. Transfer learning avec ResNet50, data augmentation et validation sur dataset médical standardisé.</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">Keras</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">ResNet</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="#" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="#" class="btn btn--secondary btn--small">Code GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 5 -->
+                    <article class="card project-card" data-category="tabulaire">
+                        <div class="card__header">
+                            <h3 class="card__title">Prédiction prix immobilier</h3>
+                            <p class="card__subtitle">Régression • Feature Engineering</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Modèle de régression pour estimer les prix immobiliers en région parisienne. Géolocalisation, feature engineering spatial et ensemble de modèles pour R² = 0.87.</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">GeoPandas</span>
+                                <span class="tag">Random Forest</span>
+                                <span class="tag">API REST</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="#" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="#" class="btn btn--secondary btn--small">Code GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 6 -->
+                    <article class="card project-card" data-category="nlp">
+                        <div class="card__header">
+                            <h3 class="card__title">Système de recommandation</h3>
+                            <p class="card__subtitle">Recommandation • Collaborative Filtering</p>
+                        </div>
+                        <div class="card__content">
+                            <p>Système de recommandation de films basé sur le filtrage collaboratif et l'analyse de contenu. Matrice de factorisation et similarité cosinus pour suggestions personnalisées.</p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Surprise</span>
+                                <span class="tag">NMF</span>
+                                <span class="tag">Cosine Similarity</span>
+                                <span class="tag">Flask</span>
+                            </div>
+                        </div>
+                        <div class="card__actions">
+                            <a href="#" class="btn btn--primary btn--small">Voir détails</a>
+                            <a href="#" class="btn btn--secondary btn--small">Code GitHub</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Message si aucun projet -->
+                <div id="no-projects" class="text-center mt-xl hidden">
+                    <p style="color: var(--text-light); font-size: 1.125rem;">Aucun projet trouvé pour cette catégorie.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <ul class="footer__links">
+                    <li><a href="mailto:alex.dupont@email.com" class="footer__link" aria-label="Email">✉️</a></li>
+                    <li><a href="https://linkedin.com/in/lansanacisse" class="footer__link" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a></li>
+                    <li><a href="https://github.com/lansanacisse" class="footer__link" aria-label="GitHub" target="_blank" rel="noopener">🔗</a></li>
+                </ul>
+            </div>
+            <p class="footer__copyright">
+                © 2025 Lansana CISSE. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('nav__menu--open');
+        }
+        
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            const noProjectsMsg = document.getElementById('no-projects');
+            let visibleCount = 0;
+            
+            // Mettre à jour les boutons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filtrer les projets
+            projects.forEach(project => {
+                if (category === 'all' || project.dataset.category === category) {
+                    project.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+            
+            // Afficher/masquer le message "aucun projet"
+            if (visibleCount === 0) {
+                noProjectsMsg.classList.remove('hidden');
+            } else {
+                noProjectsMsg.classList.add('hidden');
+            }
+        }
+        
+        // Fermer le menu mobile si on clique ailleurs
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('nav-menu');
+            const toggle = document.querySelector('.nav__toggle');
+            
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.classList.remove('nav__menu--open');
+            }
+        });
+    </script>
+</body>
+</html>
